@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.contact-section {
+  background-color: #222222;
+  padding-inline: 4em;
+  padding-bottom: 3em;
+}
+.aa {
+  padding-top: 5.5em !important;
+  padding-bottom: 3.5em;
+}
+
+.col h3 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.contact-content {
+  margin-top: 2em;
+}
+.contact-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+.contact-content ul li {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+.contact-content ul li a {
+  text-decoration: none;
+  color: silver;
+  font-weight: 600;
+}
+
+.contact-content p {
+  color: silver;
+  font-weight: 600;
+  line-height: 40px;
+}
+.social {
+  align-items: center;
+  margin-bottom: 3em;
+}
+.social a {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding-inline: 15px;
+  padding-block: 10px;
+  border-radius: 50%;
+}
+.social a:hover {
+  background-color: #ffffff;
+  color: #222222;
+}
+.social a i {
+  font-size: 1.5rem;
+}
+.contact-info {
+  display: flex;
+  gap: 2rem;
+}
+.contact-info i {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+footer p {
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 3em;
+}

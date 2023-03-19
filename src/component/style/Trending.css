@@ -1,0 +1,115 @@
+.trending-section {
+  padding-inline: 4em;
+  padding-top: 4.3em;
+}
+.trending-section h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+.rr {
+  padding-bottom: 1em;
+}
+.trending-list {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+.trending-bagde {
+  background-color: #e22d2d;
+  padding-inline: 10px;
+  padding-block: 16px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  word-spacing: 0px;
+}
+.product-img {
+  width: 70%;
+  height: auto;
+  display: block;
+  padding-top: 4em !important;
+}
+.product-img:hover {
+  transform: scale(1.2) rotate(-80deg);
+}
+.trending-list p {
+  text-align: center;
+  font-weight: 600;
+}
+.trending-list p a {
+  font-size: 1em;
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+}
+.trending-list p a:hover {
+  opacity: 0.5;
+}
+.price {
+  color: #eb1c23;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.react {
+  background-color: #ffffff;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.15);
+  width: 12rem;
+  height: 2.8rem;
+  padding: 0 7px 0 7px;
+  max-width: calc(100% -20px);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  visibility: hidden;
+}
+.react i {
+  font-size: 1.5rem;
+  color: #000000;
+}
+.react i:hover {
+  color: silver;
+}
+
+.show {
+  visibility: visible;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000000 !important;
+  opacity: 0.5;
+  margin-top: -3em;
+}
+.swiper-button-prev:hover {
+  color: silver;
+}
+.swiper-button-next:hover {
+  color: silver;
+}
+.swiper-pagination span {
+  background-color: #000000;
+  width: 10px;
+  height: 10px;
+  margin-top: 10em !important;
+}
+
+@media screen and (max-width: 764px) {
+  .trending-section {
+    padding-inline: 2em;
+  }
+}

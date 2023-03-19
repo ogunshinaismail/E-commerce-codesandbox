@@ -1,0 +1,77 @@
+.category-section {
+  overflow-x: hidden;
+}
+.category-section h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+  margin-inline: 2em !important;
+  margin-top: 1.4em !important;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.list-item h3 {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 1.1px;
+  word-spacing: 0;
+  line-height: 24.2px;
+  position: absolute;
+  top: 70%;
+}
+
+.button {
+  position: absolute;
+  top: 80%;
+  display: flex;
+  gap: 1em;
+}
+
+.button button {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border: 1px solid #000;
+  background-color: #ffffff;
+  outline: none;
+  border-radius: 5px;
+}
+
+.button button a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.button > *:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 764px) {
+  .category-section h2 {
+    margin-inline: 1em !important;
+  }
+}
+@media screen and (max-width: 520px) {
+  .list-item h3 {
+    top: 55%;
+  }
+  .button {
+    top: 70%;
+  }
+}
