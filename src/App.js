@@ -26,6 +26,7 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import TrendinList from "./component/TrendinList";
 
 function createEntry(trend, index) {
   const { 
@@ -73,68 +74,67 @@ function App() {
     <div className="homepage">
       <Header />
       <Home />
-      <section className="trending-section" id="trending">
+
+      <TrendinList />
+
+      {/* <section className="trending-section" id="trending">
         <h2>Trending</h2>
-        <div className="grid-am">
+        <div className="col-md-4 col-sm-6 col-6 col-lg-4 col-xl-3 trend-grid">
           {products.map(prod => (
-            <div className="full">
-              <div class="col-md-4 col-sm-6 col-6 col-lg-4 col-xl-3">
-                <div
-                  className="trending-list"
-                  onMouseEnter={() => {
-                    isSetReact(!isReact);
-                  }}
-                >
-                  <span className="trending-bagde">{prod.badge}</span>
-                  <img
-                    class="img-fluid"
-                    className="product-img"
-                    src={prod.imgURL}
-                    alt=""
-                  />
-                  <div className={isReact ? "react show" : "react"}>
-                    <div>
-                      {cart.some( (p) => p.id === prod.id) ? (
-                        <p onClick={() => 
+              <div
+                className="trending-list"
+                onMouseEnter={() => {
+                  isSetReact(!isReact);
+                }}
+              >
+                <span className="trending-bagde">{prod.badge}</span>
+                <img
+                  class="img-fluid"
+                  className="product-img"
+                  src={prod.imgURL}
+                  alt=""
+                />
+                <div className={isReact ? "react show" : "react"}>
+                  <div>
+                    {cart.some( (p) => p.id === prod.id) ? (
+                      <p onClick={() => 
+                          dispatch({
+                              type: "REMOVE_FROM_CART",
+                              payload: prod
+                          })
+                        }
+                      >rmv</p>
+                      ) : (
+                      <i 
+                        onClick={() => {
                             dispatch({
-                                type: "REMOVE_FROM_CART",
+                                type: 'ADD_TO_CART',
                                 payload: prod
                             })
-                          }
-                        >rmv</p>
-                        ) : (
-                        <i 
-                          onClick={() => {
-                              dispatch({
-                                  type: 'ADD_TO_CART',
-                                  payload: prod
-                              })
-                          }}
-                        >
-                          <FontAwesomeIcon icon={faShoppingCart} />
-                        </i>
-                      )}
-                    </div>
-        
-                    {/* <i class="bi bi-cart3"></i> */}
-                    {/* <i class="bi bi-search"></i> */}
-                    <i>
-                      <FontAwesomeIcon icon={faSearch} />
-                    </i>
-                    {/* <i class="bi bi-heart"></i> */}
-                    <i>
-                      <FontAwesomeIcon icon={faHeart} />
-                    </i>
+                        }}
+                      >
+                        <FontAwesomeIcon icon={faShoppingCart} />
+                      </i>
+                    )}
                   </div>
-                  <p>
-                    <a href="#">{prod.details}</a>
-                  </p>
-                  <span className="price">{prod.price}</span>
+      
+                  
+                  <i>
+                    <FontAwesomeIcon icon={faSearch} />
+                  </i>
+                  <i>
+                    <FontAwesomeIcon icon={faHeart} />
+                  </i>
                 </div>
+                <p>
+                  <a href="#">{prod.details}</a>
+                </p>
+                <span className="price">{prod.price}</span>
               </div>
-            </div>
           ))}
         </div>
+
+
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -160,7 +160,7 @@ function App() {
             </div>
           </SwiperSlide> 
         </Swiper>
-      </section>
+        </section>*/}
 
       <section className="category-section" id="category">
         <h2>Categories</h2>

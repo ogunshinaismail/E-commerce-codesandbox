@@ -17,9 +17,28 @@ body{
   position: relative;
 }
 
-/* .grid-am {
+/* .trend-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 100%;
+  width: 100% !important;
+  gap: 1rem;
+}
+
+.trend-grid div {
+  width: 200px;
+  height: 300px;
+  padding: 3rem;
+  background-color: #000000;
 } */
+
+
+.react-multi-carousel-track {
+  width: 100% !important;
+}
+
+@media screen and (max-width: 764px) {
+  .trend-grid {
+    grid-template-columns: 100%;
+  }
+}
 
