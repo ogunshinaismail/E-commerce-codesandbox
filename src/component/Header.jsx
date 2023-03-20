@@ -10,7 +10,7 @@ import "./style/Header.css";
 import logo from "../images/logo.png";
 import { useState } from "react";
 import { CartState } from "../context/Context";
-import Cart from "./Cart";
+import CartModal from "./CartModal";
 
 export default function Header() {
   const [isSearch, setIsSearch] = useState(false);
@@ -116,7 +116,7 @@ export default function Header() {
         </div>
       </nav>
 
-      {showCart ? <Cart setShowCart={setShowCart} /> : null}
+      {showCart ? <CartModal setShowCart={setShowCart} /> : null}
     </>
   );
 }

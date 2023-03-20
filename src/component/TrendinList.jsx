@@ -33,7 +33,7 @@ const responsive = {
 const TrendinList = () => {
   const [isReact, isSetReact] = useState(false);
   const { 
-    state: { products, cart },
+    state: { products, cart, wishlist },
     dispatch,
   } = CartState()
 
@@ -116,9 +116,29 @@ const TrendinList = () => {
                   <FontAwesomeIcon icon={faSearch} />
                 </i>
                 {/* <i class="bi bi-heart"></i> */}
-                <i>
-                  <FontAwesomeIcon icon={faHeart} />
-                </i>
+
+                <div>
+                  {wishlist.some( (p) => p.id === prod.id) ? (
+                    <p onClick={() => 
+                        dispatch({
+                            type: "REMOVE_FROM_WISHLIST",
+                            payload: prod
+                        })
+                      }
+                    >wish</p>
+                    ) : (
+                    <i 
+                      onClick={() => {
+                          dispatch({
+                              type: 'ADD_TO_WISHLIST',
+                              payload: prod
+                          })
+                      }}
+                    >
+                      <FontAwesomeIcon icon={faHeart} />
+                    </i>
+                  )}
+                </div>
               </div>
               <p>
                 <a href="#">{prod.details}</a>
