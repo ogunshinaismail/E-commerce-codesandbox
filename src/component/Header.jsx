@@ -12,7 +12,7 @@ import { useState } from "react";
 import { CartState } from "../context/Context";
 import CartModal from "./CartModal";
 import { useNavigate } from "react-router-dom";
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   const [isSearch, setIsSearch] = useState(false);
@@ -27,9 +27,9 @@ export default function Header() {
     <>
       <nav class="navbar navbar-expand-xl fixed-top py-3 px-5 bg-white">
         <div class="container-fluid header">
-          <a class="navbar-brand" href="#">
+          <Link to="/" class="navbar-brand">
             <img class="d-block" src={logo} alt="WAGWAN" />
-          </a>
+          </Link>
           <button
             class="navbar-toggler"
             type="button"
