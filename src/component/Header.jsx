@@ -11,14 +11,17 @@ import logo from "../images/logo.png";
 import { useState } from "react";
 import { CartState } from "../context/Context";
 import CartModal from "./CartModal";
+import { useNavigate } from "react-router-dom";
+// import { Link } from 'react-router-dom'
 
 export default function Header() {
   const [isSearch, setIsSearch] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const { 
-      state: { products, cart },
+      state: { wishlist, cart },
       dispatch, 
   } = CartState();
+  const navigate = useNavigate();
 
   return (
     <>
@@ -101,9 +104,12 @@ export default function Header() {
             {/* <i class="bi bi-search"></i> */}
           </button>
 
-          <button className="favorite">
+          <button className="favorite" onClick={() => navigate("/wishlist")}>
             {/* <i class="bi bi-heart"></i> */}
             <FontAwesomeIcon icon={faHeart} />
+            <div className="cart-length">
+              <p>{wishlist.length}</p>
+            </div>
           </button>
 
           <button className="shopping-crat" onClick={() => setShowCart(true)}>
