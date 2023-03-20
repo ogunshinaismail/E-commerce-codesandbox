@@ -14,7 +14,7 @@ import Cart from "./Cart";
 
 export default function Header() {
   const [isSearch, setIsSearch] = useState(false);
-  const [showCart, setShowCart] = useState(true);
+  const [showCart, setShowCart] = useState(false);
   const { 
       state: { products, cart },
       dispatch, 
