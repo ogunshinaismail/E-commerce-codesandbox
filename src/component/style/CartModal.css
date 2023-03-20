@@ -114,6 +114,7 @@
     border: none;
     padding: .5rem 0;
     text-transform: uppercase;
+    width: 100%;
 }
 
 .checkout{
@@ -122,6 +123,7 @@
     padding: .5rem 0;
     text-transform: uppercase;
     color: #fff;
+    width: 100%;
 }
 
 .empty-cart {
