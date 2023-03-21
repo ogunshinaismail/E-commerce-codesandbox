@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.productdetails--section {
+  margin-top: 5.5em;
+  margin-bottom: 5.5em;
+}
+.product-name {
+  color: black;
+  font-weight: 600;
+  line-height: 45px;
+  font-size: 2rem;
+}
+.product--price {
+  color: #eb1c23;
+  font-weight: 600;
+  line-height: 28px;
+  font-size: 1.1rem;
+  margin-top: 1.3em;
+  margin-bottom: 0.6em;
+}
+.product--info li {
+  list-style-type: disc;
+  font-size: 0.85rem;
+  line-height: 22px;
+  font-weight: 500;
+  color: #777777;
+}
+.product--info ul {
+  padding-left: 1em;
+}
+.product-addtc {
+  background-color: #eb1c23;
+  color: #ffffff;
+  padding: 12px 20px 12px 20px;
+  letter-spacing: 0.3px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  height: 3.3rem;
+}
+.sizeS {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 19.6px;
+}
+.option-box {
+  font-size: 0.9rem;
+  color: #777777;
+  line-height: 19.6px;
+  border: 1px solid #e8e8e8;
+  padding: 0 30px 0 15px;
+  width: 16.25rem;
+  max-width: 16.25rem;
+  height: 2.8rem;
+  outline: none;
+  margin-left: 1em;
+}
+.incrementt-button {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  color: #777777;
+}
+.incrementt-button span {
+  border: 1px solid #e8e8e8;
+}
+.incrementt-button span:hover {
+  background-color: #eb1c23;
+  color: #ffffff;
+  cursor: pointer;
+}
+.accordion {
+  margin-right: 7rem;
+  width: 95% !important;
+}
+.accordion-button {
+  padding-left: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 22.4px;
+}
+.accordion-button:hover {
+  color: #eb1c23;
+}
+.accordion-item:first-child {
+  border-top: 1px solid #e8e8e8 !important;
+}
+.review-text {
+  height: 11.7rem !important;
+  width: 100% !important;
+  /* width: 35rem; */
+  outline: none;
+  border: 1px solid #e8e8e8;
+  padding: 10px 15px;
+  line-height: 24px;
+  color: #777777;
+  font-size: 0.9rem;
+}
+.accordion-body {
+  padding: 1em 0;
+}
+.accordion-body h4 {
+  color: #777777;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 24px;
+}
+.accordion-body p {
+  color: #777777;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 30px;
+}
+.accordion-body b {
+  color: #eb1c23;
+}
+.review-form label {
+  font-size: 0.9rem;
+  color: #242424;
+  line-height: 22.4px;
+  font-weight: 500;
+}
+.review-form input {
+  width: 100%;
+  height: 2.7rem;
+  line-height: 22.4px;
+  color: #777777;
+  padding: 0 15px;
+  outline: none;
+  border: 1px solid #e8e8e8;
+}
+.review-form button {
+  background-color: #ea3c42;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 18px;
+  text-transform: uppercase;
+  height: 2.6rem;
+  width: 6rem;
+  outline: none;
+  padding: 12px 20px 12px 20px;
+  border: none;
+}
+@media screen and (max-width: 767px) {
+  .product--info {
+    padding-left: 2em;
+  }
+}

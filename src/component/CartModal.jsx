@@ -97,7 +97,7 @@ const CartModal = ({setShowCart}) => {
                         </div>
 
                         <div className="cart-btns">
-                            <Link to='/cart'>
+                            <Link to='/view-cart'>
                                 <button className='view-cart'>View Cart</button>
                             </Link>
                             <Link to='/wishlist'>

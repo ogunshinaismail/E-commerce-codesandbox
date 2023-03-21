@@ -9,6 +9,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./style/Trending.css";
 import "../App.css"
 import { CartState } from '../context/Context';
+import { Link } from 'react-router-dom';
 
 const responsive = {
   superLargeDesktop: {
@@ -32,6 +33,7 @@ const responsive = {
 
 const TrendinList = () => {
   const [isReact, isSetReact] = useState(false);
+
   const { 
     state: { products, cart, wishlist },
     dispatch,
@@ -75,9 +77,8 @@ const TrendinList = () => {
       {products.map(prod => (
         <div
           className="trending-list"
-          onMouseEnter={() => {
-            isSetReact(!isReact);
-          }}
+          onMouseEnter={() => isSetReact(!isReact)}
+          onMouseLeave={() => isSetReact(!isReact)}
         >
               <span className="trending-bagde">{prod.badge}</span>
               <img
@@ -141,7 +142,7 @@ const TrendinList = () => {
                 </div>
               </div>
               <p>
-                <a href="#">{prod.details}</a>
+                <Link to={`/product/${prod.id}`}>{prod.details}</Link>
               </p>
               <span className="price">{prod.price}</span>
         </div>

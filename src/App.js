@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="homepage">
       <Router />
-    </div>
+    </div> 
   )
 }
 
