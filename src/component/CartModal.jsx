@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './style/CartModal.css'
 import { CartState } from '../context/Context'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const CartModal = ({setShowCart}) => {
+    const navigate = useNavigate()
     const { state: { cart }, dispatch } = CartState()
     const [total, setTotal] = useState()
     const [open, setOpen] = useState("")
@@ -97,12 +98,12 @@ const CartModal = ({setShowCart}) => {
                         </div>
 
                         <div className="cart-btns">
-                            <Link to='/view-cart'>
+                            <Link to='/cart'>
                                 <button className='view-cart'>View Cart</button>
                             </Link>
-                            <Link to='/wishlist'>
-                                <button className='checkout'>Checkout</button>
-                            </Link>
+                            
+                                <button className='checkout' disabled={cart.length < 1 ? true : false} onClick={() => navigate('/checkout')}>Checkout</button>
+                            
                         </div>
                     </div>
                 </div>

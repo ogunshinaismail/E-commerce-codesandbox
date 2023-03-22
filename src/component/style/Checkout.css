@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.checkout--section {
+  margin-top: 8.5rem;
+  margin-inline: 4.5em;
+}
+.checkout-form h2,
+.order-review h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 30.8px;
+  color: #242424;
+}
+.first-name {
+  margin-right: 1em;
+}
+.checkout-form label {
+  font-size: 0.9rem;
+  line-height: 22.4px;
+  color: #242424;
+  font-weight: 500;
+}
+.checkout-form label b {
+  color: #eb1c23;
+}
+.checkout-form input {
+  padding: 0 15px 0 15px;
+  height: 2.8rem;
+  font-size: 0.9rem;
+  color: #777777;
+  line-height: 22.4px;
+  max-width: 100%;
+  outline: none;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+}
+.checkout-form p {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 25px;
+  color: #777777;
+}
+.checkout-form textarea {
+  height: 11.7rem;
+  width: 100%;
+  outline: none;
+  border: 1px solid #e8e8e8;
+  padding: 10px 15px;
+  line-height: 24px;
+  color: #777777;
+  font-size: 0.9rem;
+}
+.order-review {
+  background-color: #fff;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23) !important;
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+.order-review div {
+  padding-inline: 1em;
+}
+.order-review-table > * td {
+  padding-bottom: 3em;
+  padding-top: 1em;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 20px;
+  color: #242424;
+}
+.order-review-table > * th {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: #242424;
+  padding-top: 1em !important;
+}
+.order-amount {
+  font-size: 0.9rem !important ;
+  line-height: 20px !important;
+  font-weight: 600 !important;
+  color: #eb1c23 !important;
+}
+.checkout-btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #eb1c23;
+  padding: 14px 28px 14px 28px;
+  outline: none;
+  border: none;
+}
+
+@media screen and (max-width: 1198px) {
+  .checkout--section {
+    margin-inline: 2.5em;
+  }
+}

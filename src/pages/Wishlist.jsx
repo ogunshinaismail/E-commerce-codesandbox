@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../component/style/Wishlist.css'
 import Header from '../component/Header'
+import Contact from '../component/Contact'
 import { CartState } from '../context/Context'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
@@ -17,86 +18,81 @@ const Wishlist = () => {
 
   return (
     <div>
-      <Header />
-      
+        <Header />
+            <section className="wishlist-section">
+                <div class="row">
+                <div class="col-12">
+                    <table class="table">
+                        <thead>
+                            <tr class="text-uppercase wishlist-heading">
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">cart</th>
+                            </tr>
+                        </thead>
 
-      <div className='wishlist-page'>
-        <div className="cart-details-header">
-              <div></div>
+                        {wishlist.length > 0 ? (
+                            <tbody className="wishlist-details">
+                            {wishlist.map(item => (
+                                <tr>
+                                    <th 
+                                        scope="row"
+                                        onClick={() => {
+                                            dispatch({
+                                                type: "REMOVE_FROM_WISHLIST",
+                                                payload: item
+                                            })
+                                          }
+                                        }
+                                    >X</th>
 
-              <div className='span-2'>
-                <p>PRODUCT</p>
-              </div>
-
-              <div>
-                <p>PRICE</p>
-              </div>
-
-              <div>
-                <p>ADD TO CART</p>
-              </div>
-        </div>
-
-        <div>
-          {wishlist.length > 0 ? (
-              <div>
-                {wishlist.map(item => (
-                  <div className="cart-details-content">
-                      <div className='first-col'>
-                        <p
-                          className='close'
-                          onClick={() => {
-                              dispatch({
-                                  type: "REMOVE_FROM_WISHLIST",
-                                  payload: item
-                              })
-                            }
-                          }
-                        >
-                          X
-                        </p>
-                        <img src={item.imgURL} alt="" width='80px' />
-                      </div>
-            
-                      <div className='span-2'>
-                        <p>{item.badge}</p>
-                      </div>
-            
-                      <div>
-                        <p>₦{item.price}</p>
-                      </div>
-            
-                      <div>
-                  {cart.some( (p) => p.id === item.id) ? (
-                    <p onClick={() => 
-                        dispatch({
-                            type: "REMOVE_FROM_CART",
-                            payload: item
-                        })
-                      }
-                    >rmv</p>
-                    ) : (
-                    <i 
-                      onClick={() => {
-                          dispatch({
-                              type: 'ADD_TO_CART',
-                              payload: item
-                          })
-                      }}
-                    >
-                      <FontAwesomeIcon icon={faShoppingCart} />
-                    </i>
-                  )}
+                                    <td>
+                                        <img
+                                        style={{ width: "100px" }}
+                                        class="img-fluid d-block"
+                                        src={item.imgURL}
+                                        alt="..."
+                                        />
+                                    </td>
+                                    <td className="wishlist__name">
+                                        {item.details}
+                                    </td>
+                                    <td className="wishlist--price">₦{item.price}</td>
+                                    <td className="wishlist--crat">
+                                        {cart.some( (p) => p.id === item.id) ? (
+                                            <p onClick={() => 
+                                                dispatch({
+                                                    type: "REMOVE_FROM_CART",
+                                                    payload: item
+                                                })
+                                            }
+                                            >Remove</p>
+                                            ) : (
+                                            <i 
+                                            onClick={() => {
+                                                dispatch({
+                                                    type: 'ADD_TO_CART',
+                                                    payload: item
+                                                })
+                                            }}
+                                            >
+                                            <FontAwesomeIcon icon={faShoppingCart} />
+                                            </i>
+                                        )}
+                                    </td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        ): (
+                            <p className='empty-cart'>Your wishlist is empty</p>
+                        )}
+                    </table>
                 </div>
-
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <p className='empty-cart'>Your wishlist is empty</p>
-          )}    
-        </div>
-      </div>
+                </div>
+            </section>
+        <Contact />
     </div>
   )
 }

@@ -1,30 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
 }
-
-.wishlist-page {
-    width: 80%;
-    margin: 9rem auto 0 auto;
+body {
+  font-family: "Montserrat", sans-serif;
 }
-
-.cart-details-header {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    border-bottom: 1px solid #e1e1e1;
+.wishlist-section {
+  margin-top: 8.5rem;
+  margin-inline: 4.5em;
+  margin-bottom: 3em;
 }
-
-.span-2 {
-    grid-column: span 2 / span 3;
+.wishlist-heading {
+  color: #242424;
+  font-weight: 400;
+  line-height: 40px;
+  font-size: 0.95rem;
 }
-
-.cart-details-content {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    border-bottom: 1px solid #e1e1e1;
-    padding: .6rem 0;
+.wishlist-details > * th {
+  color: #777777;
+  font-size: 0.9rem;
+}
+.wishlist__name {
+  color: #333333 !important;
+  padding-top: 2em !important;
+}
+.wishlist--price {
+  padding-top: 2em !important;
+  color: #eb1c23 !important;
+  font-weight: 500 !important;
+}
+.wishlist--crat {
+  font-size: 1.1rem !important;
+  padding-top: 1.6em !important;
+}
+.wishlist--crat:hover {
+  color: #eb1c23 !important;
+}
+@media screen and (max-width: 1198px) {
+  .wishlist-section {
+    margin-inline: 2.5em;
+  }
+}
+@media screen and (max-width: 452px) {
+  .wishlist-section {
+    margin-inline: 1em;
+  }
 }

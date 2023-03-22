@@ -2,8 +2,8 @@ import React from 'react'
 import { Routes, Route } from "react-router-dom";
 import ProductDetails from '../component/ProductDetails';
 import Cart from '../pages/Cart';
+import Checkout from '../pages/Checkout';
 import Homepage from '../pages/Homepage';
-import ViewCart from '../pages/ViewCart';
 import Wishlist from '../pages/Wishlist';
 
 const Router = () => {
@@ -11,10 +11,10 @@ const Router = () => {
     <div>
         <Routes>
             <Route path='/' element={<Homepage />} />
+            <Route path='/product/:id' element={<ProductDetails />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/wishlist' element={<Wishlist />} />
-            <Route path='/view-cart' element={<ViewCart />} />
-            <Route path='/product/:id' element={<ProductDetails />} />
+            <Route path='/checkout' element={<Checkout />} />
         </Routes>
     </div>
   )

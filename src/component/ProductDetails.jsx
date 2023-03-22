@@ -13,7 +13,6 @@ const ProductDetails = () => {
   const product = trendinglist[id - 1]
   const {imgURL, details, price} = product;
   const { dispatch } = CartState()
-  console.log(product);
 
   return (
     <div>

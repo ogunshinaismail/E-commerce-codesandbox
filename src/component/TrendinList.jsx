@@ -77,8 +77,8 @@ const TrendinList = () => {
       {products.map(prod => (
         <div
           className="trending-list"
-          onMouseEnter={() => isSetReact(!isReact)}
-          onMouseLeave={() => isSetReact(!isReact)}
+          onMouseEnter={() => isSetReact(true)}
+          onMouseLeave={() => isSetReact(false)}
         >
               <span className="trending-bagde">{prod.badge}</span>
               <img

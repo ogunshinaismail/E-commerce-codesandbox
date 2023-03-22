@@ -15,6 +15,11 @@ export const cartReducer = (state, action) => {
                     ...state, 
                     cart: state.cart.filter( c => c.id === action.payload.id ? c.qty=action.payload.qty : c.qty)
                 };
+        case "INCREASE":
+            return {
+                ...state,
+                cart: state.cart.map(c => c.id === action.payload.id ? c.qty=action.payload.qty + 1 : c.qty)
+            };
         case "ON_DELETE_ALL_ITEMS_FROM_CART":
             return {
                 ...state,
