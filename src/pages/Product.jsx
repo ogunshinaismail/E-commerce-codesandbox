@@ -3,8 +3,6 @@ import ProductList from "../component/ProductList";
 import Productdata from "../ProductData";
 import Header from '../component/Header'
 import Contact from '../component/Contact'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import '../component/style/Product.css'
 import { useNavigate } from "react-router-dom";
 
@@ -59,8 +57,9 @@ const Product = () => {
                         onClick={() => {
                             setIsGrid(!isGrid);
                         }}
+                        class="bi bi-grid-fill"
                     >
-                        <FontAwesomeIcon icon={faBars} />
+                        
                     </i>
                 </div>
 

@@ -61,5 +61,7 @@ body {
 @media screen and (max-width: 1198px) {
   .min-header {
     padding: 0.7em 2em;
+    margin-top: 0;
   }
+
 }
