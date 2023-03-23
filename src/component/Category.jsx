@@ -12,8 +12,9 @@ export default function Category(props) {
             <button>
               <a href="#">{props.type1}</a>
             </button>
-            <button>
-              <a href="#">{props.type2 === null ? "tt" : props.type2}</a>
+            {console.log(props.type2)}
+            <button className={props.type2 === undefined ? "hide" : "nothide"}>
+              <a href="#">{props.type2 === undefined ? "tt" : props.type2}</a>
             </button>
           </div>
         </div>

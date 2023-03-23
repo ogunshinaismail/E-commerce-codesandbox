@@ -193,7 +193,7 @@ const Checkout = () => {
                                     </table>
                                     
                                     <button 
-                                        class="mt-4 w-100 p-3 text-center text-uppercase checkout-btn"
+                                        class="mt-4 mb-0 w-100 p-3 text-center text-uppercase checkout-btn"
                                         onClick={() => setShowCheckout(!showCheckout)}
                                     >
                                         CHECK Out

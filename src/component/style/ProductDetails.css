@@ -13,7 +13,7 @@ body {
 }
 .productdetails--section img{
   padding-top: 4em;
-  padding-left: 3em;
+  padding-inline: 3em;
   /* align-items: center !important; */
 }
 .product-name {
