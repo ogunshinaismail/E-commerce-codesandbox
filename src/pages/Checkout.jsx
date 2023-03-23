@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react'
 import '../component/style/Checkout.css'
 import Header from '../component/Header'
 import Contact from '../component/Contact'
+import Sucessfulcheckout from '../component/Sucessfulcheckout'
+import EmptyCart from '../component/EmptyCart'
 import { CartState } from '../context/Context'
 
 const Checkout = () => {
   const { state: { cart }, dispatch } = CartState()
   const [subTotal, setSubTotal] = useState()
+  const [showCheckout, setShowCheckout] = useState(false)
 
   useEffect(() => {
     setSubTotal(
@@ -143,60 +146,69 @@ const Checkout = () => {
 
                     <div class="col-lg-6 col-md-12 mb-5">
                         <div className="order-review">
-                        <h2 class="text-center text-uppercase">Your Order</h2>
-                        <div>
-                            <table class="table table-sm order-review-table">
-                            <thead>
-                                <tr>
-                                <th scope="col">Product</th>
-                                <th scope="col">Subtotal</th>
-                                </tr>
-                            </thead>
+                            <h2 class="text-center text-uppercase">Your Order</h2>
                             {cart.length > 0 ? (
-                                <tbody>
-                                {cart.map(item => (
-                                    <tr>
-                                        <td scope="row">
-                                            {item.details}
-                                        </td>
-                                        <td className="order-amount">₦{item.price * item.qty}</td>
-                                    </tr>     
-                                ))}
-                                        <tr>
-                                            <th scope="row">Subtotal</th>
-                                            <td className="order-amount">₦{subTotal + ".00"}</td>
-                                        </tr>
+                                <div>
+                                    <table class="table table-sm order-review-table">
+                                        <thead>
+                                            <tr>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Subtotal</th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody>
+                                            {cart.map(item => (
+                                                <tr>
+                                                    <td scope="row">
+                                                        {item.details}
+                                                    </td>
+                                                    <td className="order-amount">₦{item.price * item.qty}</td>
+                                                </tr>     
+                                            ))}
 
-                                        <tr>
-                                            <th scope="row">Shipping</th>
-                                            <td>
-                                                <input
-                                                type="radio"
-                                                id="shop1"
-                                                name="fav_language"
-                                                value="Store pickup (Surulere)"
-                                                />
-                                                  <label for="shop1">Store pickup (Surulere)</label>
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <th scope="row">Subtotal</th>
+                                                <td className="order-amount">₦{subTotal + ".00"}</td>
+                                            </tr>
 
-                                        <tr>
-                                            <th scope="row">Total</th>
-                                            <td className="order-amount">₦{subTotal + ".00"}</td>
-                                        </tr>
-                                </tbody>
+                                            <tr>
+                                                <th scope="row">Shipping</th>
+                                                <td>
+                                                    <input
+                                                    type="radio"
+                                                    id="shop1"
+                                                    name="fav_language"
+                                                    value="Store pickup (Surulere)"
+                                                    />
+                                                      <label for="shop1">Store pickup (Surulere)</label>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Total</th>
+                                                <td className="order-amount">₦{subTotal + ".00"}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                    <button 
+                                        class="mt-4 w-100 p-3 text-center text-uppercase checkout-btn"
+                                        onClick={() => setShowCheckout(!showCheckout)}
+                                    >
+                                        CHECK Out
+                                    </button>
+                                </div>
                             ) : (
-                                <p className='empty-cart'>Your cart is empty</p>
+                                <EmptyCart />
                             )}
-                            </table>
-                            <button class="mt-4 w-100 p-3 text-center text-uppercase checkout-btn">
-                            CHECK Out
-                            </button>
-                        </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            {showCheckout ? <Sucessfulcheckout /> : null}
+
         <Contact />
     </div>
   )

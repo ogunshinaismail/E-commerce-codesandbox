@@ -12,6 +12,7 @@ body {
 .checkout--section {
   margin-top: 8.5rem;
   margin-inline: 4.5em;
+  position: relative;
 }
 .checkout-form h2,
 .order-review h2 {
