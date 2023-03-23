@@ -36,7 +36,7 @@ const Product = () => {
                     <button className="font-weight-normal text-dark button-men">
                         <a>Men</a>
                     </button>
-                </div>
+                </div> 
 
                 <h1 className="text-center text-uppercase">TOPS FOR MEN</h1>
 

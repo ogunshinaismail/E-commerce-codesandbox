@@ -31,8 +31,22 @@ const responsive = {
   }
 };
 
+
+
 const TrendinList = () => {
   const [isReact, isSetReact] = useState(false);
+  const [ open, setOpen ] = useState("")
+
+  const toggleElement = (i) => {
+    if(i === open) {
+        //Close panel
+        setOpen("")
+      } else {
+        //open specific panel
+        setOpen(i)
+        // isSetReact(true)
+      }
+  };
 
   const { 
     state: { products, cart, wishlist },
@@ -74,11 +88,11 @@ const TrendinList = () => {
         swipeable
       >
         
-      {products.map(prod => (
+      {products.map((prod, index) => (
         <div
           className="trending-list"
-          onMouseEnter={() => isSetReact(true)}
-          onMouseLeave={() => isSetReact(false)}
+          onMouseEnter={() => toggleElement(index)}
+          onMouseLeave={() => toggleElement(index)}
         >
               <span className="trending-bagde">{prod.badge}</span>
               <img
@@ -87,7 +101,7 @@ const TrendinList = () => {
                 src={prod.imgURL}
                 alt=""
               />
-              <div className={isReact ? "react show" : "react"}>
+              <div className={open === index ? "react show" : "react"}>
                 <div>
                   {cart.some( (p) => p.id === prod.id) ? (
                     <p onClick={() => 
