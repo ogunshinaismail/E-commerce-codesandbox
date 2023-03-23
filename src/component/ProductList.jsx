@@ -31,7 +31,7 @@ const ProductList = (props) => {
             navigation={showEffect ? true : false}
             modules={[Pagination, Navigation]}
             className="mySwiper"
-            >
+            > 
             <SwiperSlide>
                 <img className="img-fluid" src={props.imgURL} alt="..." />
             </SwiperSlide>

@@ -6,6 +6,7 @@ import Contact from '../component/Contact'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import '../component/style/Product.css'
+import { useNavigate } from "react-router-dom";
 
 function createProduct(goods) {
     return (
@@ -21,7 +22,13 @@ function createProduct(goods) {
   }
 
 const Product = () => {
+    const navigate = useNavigate()
     const [isGrid, setIsGrid] = useState(false);
+    const [gender, setGender] = useState("");
+
+    // const hamdleFilter = () => {
+    //     navigate('/')
+    // }
 
     return (
         <>
@@ -29,12 +36,12 @@ const Product = () => {
             
             <section className="main">
                 <div className="min-header stick-on-scroll">
-                    <button className="font-weight-normal text-dark button-women"> 
+                    <button className="font-weight-normal text-dark button-women" onClick={() => setGender("women")}> 
                         <a>Women</a>
                     </button>
 
-                    <button className="font-weight-normal text-dark button-men">
-                        <a>Men</a>
+                    <button className="font-weight-normal text-dark button-men" onClick={() => setGender("men")}>
+                        Men
                     </button>
                 </div> 
 
@@ -60,13 +67,28 @@ const Product = () => {
                 <section className="product--section">
                     <div className="container-fluid overflow-hidden">
                         <div className="row gx-5 ">
-                            {Productdata.map(createProduct).slice(0, 12)}
+                            {Productdata.filter(item => {
+                                if ( gender === "") {
+                                    return item;
+                                } else if (item.gender === "women") {
+                                    return item;
+                                } 
+                                console.log(item)
+                            })
+                            .map(createProduct).slice(0, 12)}
                             <img
                             className="img-fluid w-100 g-0"
                             src="https://balenciaga.dam.kering.com/m/625d2beb9b5ab1a4/Large-MB_Balenciaga_Summer23_Campaign_Look24_3200x1800px-16x9.jpg"
                             alt="..."
                             />
-                            {Productdata.map(createProduct).slice(12, 16)}
+                            {Productdata.filter(item => {
+                                if ( gender === "") {
+                                    return item;
+                                } else if (item.gender === "women") {
+                                    return item;
+                                } 
+                            })
+                            .map(createProduct).slice(12, 16)}
                         </div>
                     </div>
                 </section>
