@@ -5,6 +5,7 @@ import Contact from '../component/Contact'
 import { CartState } from '../context/Context'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import EmptyWishlist from '../component/EmptyWishlist'
 
 const Wishlist = () => {
   const { state: { wishlist, cart }, dispatch } = CartState()
@@ -20,6 +21,7 @@ const Wishlist = () => {
     <div>
         <Header />
             <section className="wishlist-section">
+            {wishlist.length > 0 ? (
                 <div class="row">
                 <div class="col-12">
                     <table class="table">
@@ -33,64 +35,64 @@ const Wishlist = () => {
                             </tr>
                         </thead>
 
-                        {wishlist.length > 0 ? (
-                            <tbody className="wishlist-details">
-                            {wishlist.map(item => (
-                                <tr>
-                                    <th 
-                                        scope="row"
-                                        onClick={() => {
+                        <tbody className="wishlist-details">
+                        {wishlist.map(item => (
+                            <tr>
+                                <th 
+                                    scope="row"
+                                    onClick={() => {
+                                        dispatch({
+                                            type: "REMOVE_FROM_WISHLIST",
+                                            payload: item
+                                        })
+                                        }
+                                    }
+                                >X</th>
+
+                                <td>
+                                    <img
+                                    style={{ width: "100px" }}
+                                    class="img-fluid d-block"
+                                    src={item.imgURL}
+                                    alt="..."
+                                    />
+                                </td>
+                                <td className="wishlist__name">
+                                    {item.details}
+                                </td>
+                                <td className="wishlist--price">₦{item.price}</td>
+                                <td className="wishlist--crat">
+                                    {cart.some( (p) => p.id === item.id) ? (
+                                        <p onClick={() => 
                                             dispatch({
-                                                type: "REMOVE_FROM_WISHLIST",
+                                                type: "REMOVE_FROM_CART",
                                                 payload: item
                                             })
-                                          }
                                         }
-                                    >X</th>
-
-                                    <td>
-                                        <img
-                                        style={{ width: "100px" }}
-                                        class="img-fluid d-block"
-                                        src={item.imgURL}
-                                        alt="..."
-                                        />
-                                    </td>
-                                    <td className="wishlist__name">
-                                        {item.details}
-                                    </td>
-                                    <td className="wishlist--price">₦{item.price}</td>
-                                    <td className="wishlist--crat">
-                                        {cart.some( (p) => p.id === item.id) ? (
-                                            <p onClick={() => 
-                                                dispatch({
-                                                    type: "REMOVE_FROM_CART",
-                                                    payload: item
-                                                })
-                                            }
-                                            >Remove</p>
-                                            ) : (
-                                            <i 
-                                            onClick={() => {
-                                                dispatch({
-                                                    type: 'ADD_TO_CART',
-                                                    payload: item
-                                                })
-                                            }}
-                                            >
-                                            <FontAwesomeIcon icon={faShoppingCart} />
-                                            </i>
-                                        )}
-                                    </td>
-                                </tr>
-                            ))}
-                            </tbody>
-                        ): (
-                            <p className='empty-cart'>Your wishlist is empty</p>
-                        )}
+                                        >Remove</p>
+                                        ) : (
+                                        <i 
+                                        onClick={() => {
+                                            dispatch({
+                                                type: 'ADD_TO_CART',
+                                                payload: item
+                                            })
+                                        }}
+                                        >
+                                        <FontAwesomeIcon icon={faShoppingCart} />
+                                        </i>
+                                    )}
+                                </td>
+                            </tr>
+                        ))}
+                        </tbody>
+                        
                     </table>
                 </div>
                 </div>
+                ): (
+                    <EmptyWishlist />
+                )}
             </section>
         <Contact />
     </div>
