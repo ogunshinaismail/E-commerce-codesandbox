@@ -3,8 +3,6 @@ import '../component/style/Wishlist.css'
 import Header from '../component/Header'
 import Contact from '../component/Contact'
 import { CartState } from '../context/Context'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import EmptyWishlist from '../component/EmptyWishlist'
 
 const Wishlist = () => {
@@ -47,7 +45,7 @@ const Wishlist = () => {
                                         })
                                         }
                                     }
-                                >X</th>
+                                ><i class="bi bi-x-circle"></i></th>
 
                                 <td>
                                     <img
@@ -78,8 +76,9 @@ const Wishlist = () => {
                                                 payload: item
                                             })
                                         }}
+                                        class="bi bi-cart3"
                                         >
-                                        <FontAwesomeIcon icon={faShoppingCart} />
+                                        
                                         </i>
                                     )}
                                 </td>

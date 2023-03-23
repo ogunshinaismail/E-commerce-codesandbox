@@ -63,12 +63,10 @@ export default function Entry(props) {
               )}
             </div>
 
-            {/* <i class="bi bi-cart3"></i> */}
-            {/* <i class="bi bi-search"></i> */}
             <i>
               <FontAwesomeIcon icon={faSearch} />
             </i>
-            {/* <i class="bi bi-heart"></i> */}
+          
             <i>
               <FontAwesomeIcon icon={faHeart} />
             </i>

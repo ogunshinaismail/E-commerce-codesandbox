@@ -49,7 +49,7 @@ const Cart = () => {
                                                     })
                                                 }
                                                 }
-                                            >X</th>
+                                            ><i class="bi bi-x-circle"></i></th>
                                             <td>
                                                 <img
                                                 style={{ width: "100px" }}

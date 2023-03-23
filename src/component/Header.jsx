@@ -1,18 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "font-awesome/css/font-awesome.min.css";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import "font-awesome/css/font-awesome.min.css";
+// import { faSearch } from "@fortawesome/free-solid-svg-icons";
+// import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+// import { faHeart } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style/Header.css";
 import logo from "../images/logo.png";
 import { useState } from "react";
 import { CartState } from "../context/Context";
 import CartModal from "./CartModal";
-import { useNavigate } from "react-router-dom";
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 export default function Header() {
   const [isSearch, setIsSearch] = useState(false);
@@ -99,22 +98,18 @@ export default function Header() {
             }}
             className="search-icon"
           >
-            <FontAwesomeIcon icon={faSearch} />
-            {/* <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> */}
-            {/* <i class="bi bi-search"></i> */}
+            <i class="bi bi-search"></i>
           </button>
 
           <button className="favorite" onClick={() => navigate("/wishlist")}>
-            {/* <i class="bi bi-heart"></i> */}
-            <FontAwesomeIcon icon={faHeart} />
+            <i class="bi bi-heart"></i>
             <div className="cart-length">
               <p>{wishlist.length}</p>
             </div>
           </button>
 
           <button className="shopping-crat" onClick={() => setShowCart(true)}>
-            {/* <i class="bi bi-bag"></i> */}
-            <FontAwesomeIcon icon={faShoppingCart} />
+            <i class="bi bi-bag"></i>
             <div className="cart-length">
               <p>{cart.length}</p>
             </div>

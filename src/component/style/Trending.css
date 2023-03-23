@@ -61,6 +61,7 @@
   color: #eb1c23;
   font-size: 0.95rem;
   font-weight: 600;
+  margin-bottom: 2em;
 }
 .react {
   background-color: #ffffff;
@@ -87,25 +88,6 @@
 
 .show {
   visibility: visible;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #000000 !important;
-  opacity: 0.5;
-  margin-top: -3em;
-}
-.swiper-button-prev:hover {
-  color: silver;
-}
-.swiper-button-next:hover {
-  color: silver;
-}
-.swiper-pagination span {
-  background-color: #000000;
-  width: 10px;
-  height: 10px;
-  margin-top: 10em !important;
 }
 
 @media screen and (max-width: 764px) {
