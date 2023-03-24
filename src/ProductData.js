@@ -10,7 +10,7 @@ const Productdata = [
     },
     {
       id: 2,
-      imgURL:"https://balenciaga.dam.kering.com/m/2d5c8afe0999c49f/Small-748970TJO251000_G.jpg?v=1",
+      imgURL:"https://balenciaga.dam.kering.com/m/684d3f6378927e37/Small-746148TNV575630_G.jpg?v=2",
       img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
       img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
       details: "Skater Tuxedo jacket",
@@ -28,7 +28,7 @@ const Productdata = [
     },
     {
         id: 4,
-        imgURL:"https://balenciaga.dam.kering.com/m/2d5c8afe0999c49f/Small-748970TJO251000_G.jpg?v=1",
+        imgURL:"https://balenciaga.dam.kering.com/m/212c339a8bcefd58/Small-746552TNV436840_G.jpg?v=1",
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",

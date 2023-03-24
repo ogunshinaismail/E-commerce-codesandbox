@@ -17,7 +17,7 @@ function createProduct(goods) {
         size={goods.size}
       />
     );
-  }
+  } 
 
 const Product = () => {
     const navigate = useNavigate()
@@ -43,7 +43,8 @@ const Product = () => {
                     </button>
                 </div> 
 
-                <h1 className="text-center text-uppercase">TOPS FOR MEN</h1>
+                {gender == "" ? <h1 className="text-center text-uppercase">TOPS</h1> : <h1 className="text-center text-uppercase">TOPS FOR {gender}</h1> } 
+                
 
                 <img
                     className="img-fluid d-block border border-dark border-1 border-opacity-50"
@@ -68,11 +69,10 @@ const Product = () => {
                         <div className="row gx-5 ">
                             {Productdata.filter(item => {
                                 if ( gender === "") {
-                                    return item;
-                                } else if (item.gender === "women") {
+                                    return item; 
+                                } else if (item.gender === gender) {
                                     return item;
                                 } 
-                                console.log(item)
                             })
                             .map(createProduct).slice(0, 12)}
                             <img
