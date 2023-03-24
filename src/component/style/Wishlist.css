@@ -36,9 +36,13 @@ body {
 .wishlist--crat {
   font-size: 1.1rem !important;
   padding-top: 1.6em !important;
+  cursor: pointer;
 }
 .wishlist--crat:hover {
   color: #eb1c23 !important;
+}
+.remove-wish{
+  cursor: pointer;
 }
 @media screen and (max-width: 1198px) {
   .wishlist-section {

@@ -67,6 +67,7 @@ const Wishlist = () => {
                                                 payload: item
                                             })
                                         }
+                                        className='remove-wish'
                                         >Remove</p>
                                         ) : (
                                         <i 

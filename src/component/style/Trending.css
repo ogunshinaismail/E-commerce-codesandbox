@@ -1,5 +1,5 @@
 .trending-section {
-  padding-inline: 4em;
+  /* padding-inline: 4em; */
   padding-top: 4.3em;
 }
 .trending-section h2 {
@@ -7,6 +7,7 @@
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.7em;
+  margin-inline: 2em;
 }
 .rr {
   padding-bottom: 1em;
@@ -61,7 +62,6 @@
   color: #eb1c23;
   font-size: 0.95rem;
   font-weight: 600;
-  margin-bottom: 2em;
 }
 .react {
   background-color: #ffffff;

@@ -69,7 +69,7 @@ const TrendinList = () => {
         containerClass="container-with-dots"
         dotListClass=""
         draggable
-        focusOnSelect={false}
+        focusOnSelect={true}
         infinite={true}
         itemClass=""
         keyBoardControl
@@ -77,12 +77,12 @@ const TrendinList = () => {
         pauseOnHover={true}
         renderArrowsWhenDisabled={false}
         renderButtonGroupOutside={true}
-        renderDotsOutside={false}
-        rewind={false}
+        // renderDotsOutside={false}
+        rewind={true}
         rewindWithAnimation={false}
         rtl={false}
         shouldResetAutoplay
-        showDots={true}
+        // showDots={false}
         sliderClass=""
         slidesToSlide={1}
         swipeable
