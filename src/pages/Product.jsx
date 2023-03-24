@@ -53,7 +53,7 @@ const Product = () => {
                 />
 
                 <div className="d-flex justify-content-between  pt-3 px-4 border-top border-bottom border-dark border-1 border-opacity-75 stick-on-scroll-filter">
-                    <p>68 Results</p>
+                    <p>{Productdata.length} Results</p>
                     <i
                         onClick={() => {
                             setIsGrid(!isGrid);
