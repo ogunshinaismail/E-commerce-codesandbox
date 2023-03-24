@@ -3,7 +3,7 @@ import slider2 from "../images/slider-2.webp";
 
 export default function Home() {
   return (
-    <div style={{marginTop: '4rem'}} id="home">
+    <div style={{marginTop: '4em'}} id="home">
       <div
         id="carouselExampleFade"
         class="carousel slide carousel-fade"
