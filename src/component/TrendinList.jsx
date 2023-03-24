@@ -64,27 +64,27 @@ const TrendinList = () => {
         // arrows
         autoPlay
         autoPlaySpeed={3000}
-        centerMode={false}
+        centerMode={true}
         className=""
         containerClass="container-with-dots"
         dotListClass=""
         draggable
         focusOnSelect={false}
-        infinite
+        infinite={true}
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}
-        pauseOnHover
+        pauseOnHover={true}
         renderArrowsWhenDisabled={false}
-        renderButtonGroupOutside={false}
+        renderButtonGroupOutside={true}
         renderDotsOutside={false}
         rewind={false}
         rewindWithAnimation={false}
         rtl={false}
         shouldResetAutoplay
-        showDots={false}
+        showDots={true}
         sliderClass=""
-        slidesToSlide={2}
+        slidesToSlide={1}
         swipeable
       >
         
@@ -104,13 +104,14 @@ const TrendinList = () => {
               <div className={open === index ? "react show" : "react"}>
                 <div>
                   {cart.some( (p) => p.id === prod.id) ? (
-                    <p onClick={() => 
+                    <i onClick={() => 
                         dispatch({
                             type: "REMOVE_FROM_CART",
                             payload: prod
                         })
                       }
-                    >rmv</p>
+                      class="bi bi-check2"
+                    ></i>
                     ) : (
                     <i 
                       onClick={() => {
@@ -120,27 +121,22 @@ const TrendinList = () => {
                           })
                       }}
                     >
-                      <FontAwesomeIcon icon={faShoppingCart} />
+                      <i class="bi bi-cart3"></i>
                     </i>
                   )}
                 </div>
-
-                {/* <i class="bi bi-cart3"></i> */}
-                {/* <i class="bi bi-search"></i> */}
-                <i>
-                  <FontAwesomeIcon icon={faSearch} />
-                </i>
-                {/* <i class="bi bi-heart"></i> */}
+                   <i class="bi bi-search"></i>
 
                 <div>
                   {wishlist.some( (p) => p.id === prod.id) ? (
-                    <p onClick={() => 
+                    <i onClick={() => 
                         dispatch({
                             type: "REMOVE_FROM_WISHLIST",
                             payload: prod
                         })
                       }
-                    >wish</p>
+                      class="bi bi-check2"
+                    ></i>
                     ) : (
                     <i 
                       onClick={() => {
@@ -150,7 +146,7 @@ const TrendinList = () => {
                           })
                       }}
                     >
-                      <FontAwesomeIcon icon={faHeart} />
+                      <i class="bi bi-heart"></i>
                     </i>
                   )}
                 </div>
@@ -158,7 +154,7 @@ const TrendinList = () => {
               <p>
                 <Link to={`/product/${prod.id}`}>{prod.details}</Link>
               </p>
-              <span className="price">{prod.price}</span>
+              <span className="price">#{prod.price}</span>
         </div>
       ))}
        

@@ -11,6 +11,7 @@ body {
   background-color: #222222;
   padding-inline: 4em;
   padding-bottom: 3em;
+  overflow: hidden;
 }
 .aa {
   padding-top: 5.5em !important;

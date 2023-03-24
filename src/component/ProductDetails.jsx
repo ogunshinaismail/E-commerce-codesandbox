@@ -23,7 +23,7 @@ const ProductDetails = () => {
           {/* first coloumn start */}
           <div class="col-md-6 col-sm-12 ">
             <img
-              class="d-block w-100 img-fluid"
+              class="d-block w-70 img-fluid"
               src={imgURL}
               alt="..."
             />
@@ -76,7 +76,7 @@ const ProductDetails = () => {
             </div>
 
             <div class="mt-4">
-              <FontAwesomeIcon icon={faHeart} /> Add to wishlist
+              <p><i class="bi bi-heart"></i> Add to wishlist</p>
             </div>
 
             <div

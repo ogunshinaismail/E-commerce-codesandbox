@@ -9,7 +9,7 @@ const trendinglist = [
     {
       id: 2,
       badge: "HOT",
-      imgURL:"https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/J/C/82233_1662020893.jpg",
+      imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
       price: 50000
     },

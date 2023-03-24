@@ -62,6 +62,14 @@
   color: #ffffff;
 }
 
+.hide{
+  display: none;
+}
+
+.nothide{
+  display: block;
+}
+
 @media screen and (max-width: 764px) {
   .category-section h2 {
     margin-inline: 1em !important;

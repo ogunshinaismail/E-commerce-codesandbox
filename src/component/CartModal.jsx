@@ -87,7 +87,10 @@ const CartModal = ({setShowCart}) => {
                             ))}
                         </div>
                     ) : (
-                        <p className='empty-cart'>Your cart is empty</p>
+                        <div class='text-center mt-5'>
+                            <h1>😞</h1>
+                            <p class='empty-cart mt-1'>Your cart is empty</p>
+                        </div>
                     )}
                     </div>
 

@@ -11,6 +11,11 @@ body {
   margin-top: 5.5em;
   margin-bottom: 5.5em;
 }
+.productdetails--section img{
+  padding-top: 4em;
+  padding-inline: 3em;
+  /* align-items: center !important; */
+}
 .product-name {
   color: black;
   font-weight: 600;

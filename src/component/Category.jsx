@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style/Category.css";
 
 export default function Category(props) {
@@ -10,10 +11,10 @@ export default function Category(props) {
           <h3>{props.details}</h3>
           <div className="button">
             <button>
-              <a href="#">{props.type1}</a>
+              <Link to="/product">{props.type1}</Link>
             </button>
-            <button>
-              <a href="#">{props.type2 === null ? "tt" : props.type2}</a>
+            <button className={props.type2 === undefined ? "hide" : "nothide"}>
+              <Link to="#">{props.type2 === undefined ? "tt" : props.type2}</Link>
             </button>
           </div>
         </div>
