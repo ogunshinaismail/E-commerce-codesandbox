@@ -194,9 +194,15 @@ const Checkout = () => {
                                     
                                     <button 
                                         class="mt-4 mb-0 w-100 p-3 text-center text-uppercase checkout-btn"
-                                        onClick={() => setShowCheckout(!showCheckout)}
+                                        onClick={() => {
+                                            dispatch({
+                                                type: "ON_DELETE_ALL_ITEMS_FROM_CART",
+                                                payload: cart
+                                            })
+                                            setShowCheckout(!showCheckout)
+                                        }}
                                     >
-                                        CHECK Out
+                                        CHECK Out 
                                     </button>
                                 </div>
                             ) : (

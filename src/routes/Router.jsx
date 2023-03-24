@@ -1,6 +1,12 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom";
 import ProductDetails from '../component/ProductDetails';
+import Bags from '../component/products/Bags';
+import Belts from '../component/products/Belts';
+import Hairs from '../component/products/Hairs';
+import Shoes from '../component/products/Shoes';
+import Tops from '../component/products/Tops';
+import Trousers from '../component/products/Trousers';
 import Cart from '../pages/Cart';
 import Checkout from '../pages/Checkout';
 import Homepage from '../pages/Homepage';
@@ -16,7 +22,14 @@ const Router = () => {
             <Route path='/cart' element={<Cart />} />
             <Route path='/wishlist' element={<Wishlist />} />
             <Route path='/checkout' element={<Checkout />} />
-            <Route path='/product' element={<Product />} />
+            <Route path='/product' element={<Product />} /> 
+            <Route path='/tops' element={<Tops />} />
+            <Route path='/trousers' element={<Trousers />} />
+            <Route path='/bags' element={<Bags />} />
+            <Route path='/belts' element={<Belts />} />
+            <Route path='/hairs' element={<Hairs />} />
+            <Route path='/shoes' element={<Shoes />} />
+            
         </Routes>
     </div>
   )

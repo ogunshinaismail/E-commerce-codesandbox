@@ -23,13 +23,17 @@ function createProduct(goods) {
         size={goods.size}
       />
     );
-  }
+  } 
 
 const Product = () => {
     const navigate = useNavigate()
     const [showEffect, setShowEffect] = useState(false);
     const [isGrid, setIsGrid] = useState(false);
     const [gender, setGender] = useState("");
+    const filteredTop = Productdata.filter(e => e.type === 'top')
+    const dataLength = filteredTop.filter(e => e.gender === gender)
+    console.log(filteredTop)
+    // console.log(Productdata)
 
     // const hamdleFilter = () => {
     //     navigate('/')
@@ -50,9 +54,8 @@ const Product = () => {
                     </button>
                 </div> 
 
+                {gender == "" ? <h1 className="text-center text-uppercase">Trouser</h1> : <h1 className="text-center text-uppercase">TOPS FOR {gender}</h1> } 
                 
-
-                <h1 className="text-center text-uppercase">TOPS FOR MEN</h1>
 
                 <img
                     className="img-fluid d-block border border-dark border-1 border-opacity-50"
@@ -61,7 +64,7 @@ const Product = () => {
                 />
 
                 <div className="d-flex justify-content-between  pt-3 px-4 border-top border-bottom border-dark border-1 border-opacity-75 stick-on-scroll-filter">
-                    <p>68 Results</p>
+                    <p>{gender === "" ? filteredTop.length : dataLength.length} Results</p>
                     <i
                         onClick={() => {
                             setIsGrid(!isGrid);
@@ -131,12 +134,12 @@ const Product = () => {
                 <section className="product--section">
                     <div className="container-fluid overflow-hidden">
                         <div className="row gx-5 ">
-                            {Productdata.filter(item => {
+                            {filteredTop.filter(item => {
                                 if ( gender === "") {
-                                    return item;
+                                    return item; 
                                 } else if (item.gender === gender) {
                                     return item;
-                                }
+                                } 
                             })
                             .map(createProduct).slice(0, 12)}
 
@@ -145,8 +148,7 @@ const Product = () => {
                             src="https://balenciaga.dam.kering.com/m/625d2beb9b5ab1a4/Large-MB_Balenciaga_Summer23_Campaign_Look24_3200x1800px-16x9.jpg"
                             alt="..."
                             />
-
-                            {Productdata.filter(item => {
+                            {filteredTop.filter(item => {
                                 if ( gender === "") {
                                     return item;
                                 } else if (item.gender === gender) {

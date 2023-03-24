@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style/Category.css";
 
-export default function Category(props) {
+const Category = (props) => {
   return (
     <>
       <div class="col-lg-6">
@@ -22,3 +22,5 @@ export default function Category(props) {
     </>
   );
 }
+
+export default  Category

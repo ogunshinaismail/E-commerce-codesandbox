@@ -5,15 +5,17 @@ const Productdata = [
       img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
       img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
       details: "Skater Tuxedo jacket",
-      gender: "men", 
+      gender: "men",
+      type: "top", 
       size: "S M XL"
     },
     {
       id: 2,
-      imgURL:"https://balenciaga.dam.kering.com/m/2c4a60628da6550/Small-746148TNV571000_G.jpg?v=1",
+      imgURL:"https://balenciaga.dam.kering.com/m/684d3f6378927e37/Small-746148TNV575630_G.jpg?v=2",
       img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
       img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
       details: "Skater Tuxedo jacket",
+      type: "top", 
       gender: "women",
       size: "S M L XL"
     },
@@ -23,15 +25,17 @@ const Productdata = [
       img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
       img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
       details: "Skater Tuxedo jacket",
+      type: "top", 
       gender: "men",
       size: "S M L"
     },
     {
         id: 4,
-        imgURL:"https://balenciaga.dam.kering.com/m/684d3f6378927e37/Small-746148TNV575630_G.jpg?v=2",
+        imgURL:"https://balenciaga.dam.kering.com/m/212c339a8bcefd58/Small-746552TNV436840_G.jpg?v=1",
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "women",
         size: "L"
     },
@@ -41,6 +45,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "men",
         size: "L XL"
     },
@@ -50,6 +55,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "women",
         size: "S M L XL"
     },
@@ -59,6 +65,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "men",
         size: "S M"
     },
@@ -68,6 +75,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "women",
         size: "S M L XL"
     },
@@ -77,6 +85,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "men",
         size: "M L Xl XXL"
     },
@@ -86,6 +95,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "women",
         size: "XL XXL"
     },
@@ -95,6 +105,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "men",
         size: "S M L XL"
     },
@@ -104,6 +115,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "women",
         size: "S  M  L  XL"
     },
@@ -113,6 +125,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "men",
         size: "M  L  XXL"
     },
@@ -122,6 +135,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "women",
         size: "M  L  XXL"
     },
@@ -131,6 +145,7 @@ const Productdata = [
         img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
         img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
         details: "Skater Tuxedo jacket",
+        type: "top", 
         gender: "men",
         size: "M  L"
     }
