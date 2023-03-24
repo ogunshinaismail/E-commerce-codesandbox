@@ -23,6 +23,9 @@ const Product = () => {
     const navigate = useNavigate()
     const [isGrid, setIsGrid] = useState(false);
     const [gender, setGender] = useState("");
+    const filteredTop = Productdata.filter(e => e.type === 'top')
+    console.log(filteredTop)
+    // console.log(Productdata)
 
     // const hamdleFilter = () => {
     //     navigate('/')
@@ -67,7 +70,7 @@ const Product = () => {
                 <section className="product--section">
                     <div className="container-fluid overflow-hidden">
                         <div className="row gx-5 ">
-                            {Productdata.filter(item => {
+                            {filteredTop.filter(item => {
                                 if ( gender === "") {
                                     return item; 
                                 } else if (item.gender === gender) {
@@ -80,10 +83,10 @@ const Product = () => {
                             src="https://balenciaga.dam.kering.com/m/625d2beb9b5ab1a4/Large-MB_Balenciaga_Summer23_Campaign_Look24_3200x1800px-16x9.jpg"
                             alt="..."
                             />
-                            {Productdata.filter(item => {
+                            {filteredTop.filter(item => {
                                 if ( gender === "") {
                                     return item;
-                                } else if (item.gender === "women") {
+                                } else if (item.gender === gender) {
                                     return item;
                                 } 
                             })
