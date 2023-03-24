@@ -96,10 +96,10 @@ const TrendinList = () => {
         >
               <span className="trending-bagde">{prod.badge}</span>
               <img
-                class="img-fluid"
+                class="img-fluid d-block w-100"
                 className="product-img"
                 src={prod.imgURL}
-                alt=""
+                alt="..."
               />
               <div className={open === index ? "react show" : "react"}>
                 <div>
