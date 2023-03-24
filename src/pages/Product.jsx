@@ -22,6 +22,7 @@ function createProduct(goods) {
 
 const Product = () => {
     const [isGrid, setIsGrid] = useState(false);
+    const [ men, setMen ] = useState("men")
 
     return (
         <>
