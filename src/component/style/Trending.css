@@ -1,13 +1,13 @@
 .trending-section {
   /* padding-inline: 4em; */
-  padding-top: 4.3em;
+  margin-top: 4.3em;
 }
 .trending-section h2 {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.7em;
-  margin-inline: 2em;
+  margin-inline: 2em !important;
 }
 .rr {
   padding-bottom: 1em;
@@ -91,7 +91,7 @@
 }
 
 @media screen and (max-width: 764px) {
-  .trending-section {
-    padding-inline: 2em;
+  .trending-section h2 {
+    margin-inline: 1em !important;
   }
 }
