@@ -7,7 +7,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 const App = () => {
   return (
-    <div className="homepage">
+    <div>
       <Router />
     </div> 
   )

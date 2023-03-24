@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   gap: 1rem;
   text-align: center;
+  background-color: red;
   /* overflow-x: hidden; */
 }
 .wish-disapointmment-face {
