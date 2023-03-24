@@ -61,7 +61,7 @@ body {
 }
 @media screen and (max-width: 1198px) {
   .min-header {
-    padding: 0.7em 2em;
+    padding: 0.7em .5em;
     margin-top: 0;
   }
   .stick-on-scroll{

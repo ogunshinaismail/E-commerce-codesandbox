@@ -1,6 +1,8 @@
 import model from "../images/model_6.png.webp";
+import { useNavigate } from 'react-router-dom'
 import "./style/Side.css";
 export default function Side() {
+  const navigate = useNavigate()
   return (
     <>
       <section className="side-section">
@@ -13,9 +15,10 @@ export default function Side() {
             <p>
               Believe the hype by chosing <mark>WAGWAN</mark>
             </p>
-            <button>
-              <a href="#">SHOP NOW</a>
-            </button>
+            {/* Go to the list of all product */}
+            <button  onClick={() => navigate('/Product')}>
+              <a href="">SHOP NOW</a>
+            </button> 
           </div>
         </div>
       </section>

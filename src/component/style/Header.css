@@ -47,13 +47,14 @@
 }
 .cart-length p {
   position: absolute;
-  font-size: 12px;
+  font-size: .9rem;
   background: red;
   color: #fff;
-  border-radius: 50%;
+  border-radius: 100%;
   padding: .2rem .4rem;
-  top: -.5rem;
-  right: -.6rem;
+  font-weight: 600;
+  top: 0rem;
+  right: -.3rem;
 }
 .favorite {
   border: 0;
@@ -165,15 +166,15 @@
   .shopping-crat {
     background-color: transparent;
     right: 0px;
-    margin-right: 0.5em;
+    margin-right: 1em;
   }
   .favorite {
     background-color: transparent;
-    right: 45px;
+    right: 66px;
   }
   .search-icon {
     background-color: transparent;
-    right: 75px;
+    right: 102px;
   }
   .navbar-toggler {
     font-size: 1em !important;
@@ -184,5 +185,8 @@
   }
   .header {
     gap: 0.2em !important;
+  }
+  .cart-length p{
+    right: 0.3rem;
   }
 }

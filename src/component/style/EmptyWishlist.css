@@ -10,14 +10,14 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .wishlistempty-section {
-  margin: 10em 1em 5em 1em;
+  /* margin: 10em 1em 5em 1em; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
   text-align: center;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .wish-disapointmment-face {
   font-size: 6rem;
