@@ -14,27 +14,39 @@ import '../style/ProductList.css'
 const Tops = () => {
     const navigate = useNavigate()
     const [showEffect, setShowEffect] = useState(false);
+    const [isWBtn, setWBtn] = useState(false);
+    const [isMBtn, setMBtn] = useState(false);
+    const [isABtn, setABtn] = useState(false);
     const [isGrid, setIsGrid] = useState(false);
     const [gender, setGender] = useState("");
+    const [ open, setOpen ] = useState("");
     const [ searchParams, setSearchParams ] = useSearchParams({filter: ""})
     const filteredTop = Productdata.filter(e => e.type === 'top')
     const dataLength = filteredTop.filter(e => e.gender === searchParams.get('filter'))
     
+    const toggleElement = (i) => {
+    if(i === open) {
+        setOpen("")
+      } else {
+        setOpen(i)
+      }
+    };
+
   return (
     <div>
         <Header />
         
         <section className="main">
             <div className="min-header stick-on-scroll">
-                <button className="font-weight-normal text-dark button-women" onClick={() => setSearchParams({ filter: 'women'})}> 
+                <button className={isWBtn ? "button-effect" : "button-women"} onClick={() => {setSearchParams({ filter: 'women'}), setWBtn(!isWBtn), setABtn(false), setMBtn(false)}}> 
                     <a>Women</a>
                 </button>
 
-                <button className="font-weight-normal text-dark button-men" onClick={() => setSearchParams({ filter: 'men'})}>
+                <button className={isMBtn ? "button-effect" : "button-men"} onClick={() => {setSearchParams({ filter: 'men'}), setMBtn(!isMBtn), setABtn(false), setWBtn(false)}}>
                     Men
                 </button>
 
-                <button className="font-weight-normal text-dark button-men" onClick={() => setSearchParams({ filter: '' })}>
+                <button className={isABtn ? "button-effect" : "button-all"} onClick={() => {setSearchParams({ filter: '' }), setWBtn(false), setMBtn(false)}}>
                     All
                 </button>
             </div> 
@@ -43,20 +55,19 @@ const Tops = () => {
             
 
             <img
-                className="img-fluid d-block border border-dark border-1 border-opacity-50"
+                className="img-fluid d-block w-100 border border-dark border-1 border-opacity-50"
                 src="https://balenciaga.dam.kering.com/m/3abae70dcbadb55d/Large-Banner-New_Balenciaga_Summer23_Campaign_Look18_2600x1016px-3x1.jpg"
                 alt="..."
             />
 
-            <div className="d-flex justify-content-between  pt-3 px-4 border-top border-bottom border-dark border-1 border-opacity-75 stick-on-scroll-filter">
+            <div className="d-flex justify-content-between pt-3 px-4 border-top border-bottom border-dark border-1 border-opacity-75 stick-on-scroll-filter">
                 <p>{searchParams.get('filter') === "" ? filteredTop.length : dataLength.length} Results</p>
                 <i
                     onClick={() => {
                         setIsGrid(!isGrid);
                     }}
                     class="bi bi-grid-fill grid-icon"
-                >
-                    
+                >     
                 </i>
             </div>
 
@@ -70,15 +81,16 @@ const Tops = () => {
                                 return item;
                             }
                         })
-                        .map((prod) => (
+                        .map((prod, index) => (
                             <div
                                 className={isGrid ? "col-md-6 col-sm-6 col-6 col-lg-6 mx-0 px-0 pt-3 pb-5 product--img text-center wrapper" : "col-md-4 col-sm-6 col-6 col-lg-4 mx-0 px-0 pt-3 pb-5 product--img text-center wrapper"}
-                                onMouseEnter={() => {
-                                    setShowEffect(!showEffect);
-                                }}
-                                onMouseLeave={() => {
-                                    setShowEffect(showEffect);
-                                }}
+                                onMouseEnter={() => toggleElement(index)}
+                                onMouseLeave={() => toggleElement(index)}// onMouseEnter={() => {
+                                //     setShowEffect(!showEffect);
+                                // }}
+                                // onMouseLeave={() => {
+                                //     setShowEffect(showEffect);
+                                // }}
                             >
 
                                 <Swiper
@@ -88,20 +100,20 @@ const Tops = () => {
                                 pagination={{
                                     clickable: true
                                 }}
-                                navigation={showEffect ? true : false}
+                                navigation={open === index ? true : false}
                                 modules={[Pagination, Navigation]}
                                 className="mySwiper"
                                 > 
                                     <SwiperSlide>
-                                        <img className="img-fluid" src={prod.imgURL} alt="..." />
+                                        <img className="img-fluid d-block w-100" src={prod.imgURL} alt="..." />
                                     </SwiperSlide>
                         
                                     <SwiperSlide>
-                                        <img className="img-fluid" src={prod.img2} alt="..." />
+                                        <img className="img-fluid d-block w-100" src={prod.img2} alt="..." />
                                     </SwiperSlide>
                         
                                     <SwiperSlide>
-                                        <img className="img-fluid" src={prod.img3} alt="..." />
+                                        <img className="img-fluid d-block w-100" src={prod.img3} alt="..." />
                                     </SwiperSlide>
                                 </Swiper>
                     

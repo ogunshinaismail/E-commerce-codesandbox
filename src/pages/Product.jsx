@@ -57,11 +57,11 @@ const Product = () => {
                         <a>Women</a>
                     </button>
 
-                    <button className={isMBtn ? "button-effect" : "button-men"} onClick={() => {setSearchParams({ filter: 'men'}), setMBtn(!isWBtn), setABtn(false), setWBtn(false)}}>
+                    <button className={isMBtn ? "button-effect" : "button-men"} onClick={() => {setSearchParams({ filter: 'men'}), setMBtn(!isMBtn), setABtn(false), setWBtn(false)}}>
                         Men
                     </button>
 
-                    <button className={isABtn ? "button-effect" : "button-all"} onClick={() => {setSearchParams({ filter: '' }), setABtn(!isWBtn), setWBtn(false), setMBtn(false)}}>
+                    <button className={isABtn ? "button-effect" : "button-all"} onClick={() => {setSearchParams({ filter: '' }), setABtn(!isABtn), setWBtn(false), setMBtn(false)}}>
                         All
                     </button>
                 </div> 
@@ -75,7 +75,7 @@ const Product = () => {
                     alt="..."
                 />
 
-                <div className="d-flex justify-content-between  pt-3 px-4 border-top border-bottom border-dark border-1 border-opacity-75 stick-on-scroll-filter">
+                <div className="d-flex justify-content-between pt-3 px-4 border-top border-bottom border-dark border-1 border-opacity-75 stick-on-scroll-filter">
                     <p>{searchParams.get('filter') === '' ? Productdata.length : dataLength.length} Results</p>
                     <i
                         onClick={() => {
@@ -117,11 +117,11 @@ const Product = () => {
                                     className="mySwiper"
                                     >  
                                         <SwiperSlide>
-                                            <img className="img-fluid w-100 g-0" src={prod.imgURL} alt="..." />
+                                            <img className="img-fluid w-100 d-block g-0" src={prod.imgURL} alt="..." />
                                         </SwiperSlide>
                             
                                         <SwiperSlide>
-                                            <img className="img-fluid w-100 g-0" src={prod.img2} alt="..." />
+                                            <img className="img-fluid w-100 d-block g-0" src={prod.img2} alt="..." />
                                         </SwiperSlide>
                             
                                         <SwiperSlide>
