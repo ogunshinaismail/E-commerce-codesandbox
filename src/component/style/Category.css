@@ -10,6 +10,11 @@
   margin-top: 1.4em !important;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .list-item {
   display: flex;
   flex-direction: column;

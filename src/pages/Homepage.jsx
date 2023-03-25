@@ -5,7 +5,6 @@ import Home from "../component/Home";
 import Entry from "../component/Trending";
 // import trendinglist from "./Trending";
 import Category from "../component/Category";
-import CategoryList from "../category";
 import Side from "../component/Side";
 import Contact from "../component/Contact";
 // import { Swiper, SwiperSlide } from "swiper/react";
@@ -69,10 +68,13 @@ const Homepage = () => {
         <Header />
         <Home />
         <TrendinList />
+
         <section className="category-section" id="category">
-        <h2>Categories</h2>
-        <div class="row g-0">{CategoryList.map(createCategory)}</div>
+          <h2>Categories</h2>
+          {/*<div class="row g-0">{CategoryList.map(createCategory)}</div>*/}
+          <Category />
         </section> 
+
         <Side />
         <Contact />
     </div>

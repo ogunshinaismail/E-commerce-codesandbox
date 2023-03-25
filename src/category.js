@@ -5,7 +5,7 @@ const CategoryList = [
       "https://balenciaga.dam.kering.com/m/3173cf759db6e6ca/Large-Home_Balenciaga_Summer23_Campaign_Look16_2600x1300px-2x1.jpg",
     details: "TOPS",
     type1: "MEN",
-    type2: "WOMEN"
+    type2: "WOMEN" 
   },
   {
     id: 2,
