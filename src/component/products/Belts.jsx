@@ -35,7 +35,7 @@ const Belts = () => {
                 </button>
             </div> 
 
-            {gender == "" ? <h1 className="text-center text-uppercase">TOPS</h1> : <h1 className="text-center text-uppercase">TOPS FOR {gender}</h1> } 
+            {gender == "" ? <h1 className="text-center text-uppercase">BELTS</h1> : <h1 className="text-center text-uppercase">BELTS FOR {gender}</h1> } 
             
 
             <img

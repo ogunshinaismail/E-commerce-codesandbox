@@ -18,17 +18,17 @@ const Router = () => {
     <div>
         <Routes>
             <Route path='/' element={<Homepage />} />
-            <Route path='/product/:id' element={<ProductDetails />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/wishlist' element={<Wishlist />} />
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/product' element={<Product />} /> 
-            <Route path='/tops' element={<Tops />} />
-            <Route path='/trousers' element={<Trousers />} />
-            <Route path='/bags' element={<Bags />} />
-            <Route path='/belts' element={<Belts />} />
-            <Route path='/hairs' element={<Hairs />} />
-            <Route path='/shoes' element={<Shoes />} />
+            <Route path='/product/:id' element={<ProductDetails />} />
+            <Route path='/product/tops' element={<Tops />} />
+            <Route path='/product/trousers' element={<Trousers />} />
+            <Route path='/product/bags' element={<Bags />} />
+            <Route path='/product/belts' element={<Belts />} />
+            <Route path='/product/hairs' element={<Hairs />} />
+            <Route path='/product/shoes' element={<Shoes />} />
             
         </Routes>
     </div>

@@ -54,7 +54,7 @@ const Product = () => {
                     </button>
                 </div> 
 
-                {gender == "" ? <h1 className="text-center text-uppercase">Trouser</h1> : <h1 className="text-center text-uppercase">TOPS FOR {gender}</h1> } 
+                {gender == "" ? <h1 className="text-center text-uppercase">ALL PRODUCTS</h1> : <h1 className="text-center text-uppercase">ALL PRODUCTS FOR {gender}</h1> } 
                 
 
                 <img

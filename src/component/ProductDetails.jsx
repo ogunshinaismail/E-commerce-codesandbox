@@ -11,6 +11,7 @@ import './style/ProductDetails.css'
 const ProductDetails = () => {
   const { id } = useParams();
   const product = trendinglist[id - 1]
+  console.log(product);
   const {imgURL, details, price} = product;
   const { dispatch } = CartState()
 
@@ -24,7 +25,7 @@ const ProductDetails = () => {
           <div class="col-md-6 col-sm-12 ">
             <img
               class="d-block w-70 img-fluid"
-              src={imgURL}
+              src={imgURL} 
               alt="..."
             />
           </div>

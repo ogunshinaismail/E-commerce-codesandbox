@@ -26,16 +26,16 @@ const Hairs = () => {
             
         <section className="main">
             <div className="min-header stick-on-scroll">
-                <button className="font-weight-normal text-dark button-women" onClick={() => setGender("women")}> 
-                    <a>Women</a>
+                <button className="font-weight-normal text-dark button-men" onClick={() => setGender("women")}> 
+                    <a>All</a>
                 </button>
 
-                <button className="font-weight-normal text-dark button-men" onClick={() => setGender("men")}>
+                {/*<button className="font-weight-normal text-dark button-men" onClick={() => setGender("men")}>
                     Men
-                </button>
+                </button>*/}
             </div> 
 
-            {gender == "" ? <h1 className="text-center text-uppercase">TOPS</h1> : <h1 className="text-center text-uppercase">TOPS FOR {gender}</h1> } 
+            {gender == "" ? <h1 className="text-center text-uppercase">Hairs</h1> : <h1 className="text-center text-uppercase">Hairs FOR {gender}</h1> } 
             
 
             <img
