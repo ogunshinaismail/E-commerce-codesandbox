@@ -39,7 +39,7 @@ const CartModal = ({setShowCart}) => {
                         <div>
                             {cart.map((item, index) => (
                                 <div className='item' key={item.id}>
-                                    <img src={item.imgURL} alt="" />
+                                    <img style={{width: '100px', height: '100px'}} src={item.imgURL} alt="" />
                                     <div className='item-det'>
                                         <div className="flex-between">
                                             <p className='item-name'>{item.badge}</p>
@@ -80,7 +80,7 @@ const CartModal = ({setShowCart}) => {
                                                     }}
                                                 />
                                             </div>
-                                            <p>{item.price}</p>
+                                            <p>#{item.price}</p>
                                         </div>
                                     </div>
                                 </div>
