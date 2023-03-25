@@ -11,6 +11,7 @@ import "../App.css"
 import { CartState } from '../context/Context';
 import { Link } from 'react-router-dom';
 
+
 const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
