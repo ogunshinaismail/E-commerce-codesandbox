@@ -31,7 +31,7 @@ const Product = () => {
     const [isGrid, setIsGrid] = useState(false);
     const [gender, setGender] = useState("");
     const [ open, setOpen ] = useState("")
-    const [ searchParams, setSearchParams ] = useSearchParams()
+    const [ searchParams, setSearchParams ] = useSearchParams({filter: ""})
     const filteredTop = Productdata.filter(e => e.type === 'top')
     const dataLength = filteredTop.filter(e => e.gender === searchParams.get('filter'))
     const showAll = searchParams.get('filter') === 'men' || 'women'

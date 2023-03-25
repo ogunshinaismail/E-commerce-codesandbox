@@ -16,10 +16,9 @@ const Tops = () => {
     const [showEffect, setShowEffect] = useState(false);
     const [isGrid, setIsGrid] = useState(false);
     const [gender, setGender] = useState("");
-    const [ searchParams, setSearchParams ] = useSearchParams()
+    const [ searchParams, setSearchParams ] = useSearchParams({filter: ""})
     const filteredTop = Productdata.filter(e => e.type === 'top')
     const dataLength = filteredTop.filter(e => e.gender === searchParams.get('filter'))
-    const showAll = searchParams.get('filter') === 'men' || 'women'
     
   return (
     <div>
@@ -34,9 +33,13 @@ const Tops = () => {
                 <button className="font-weight-normal text-dark button-men" onClick={() => setSearchParams({ filter: 'men'})}>
                     Men
                 </button>
+
+                <button className="font-weight-normal text-dark button-men" onClick={() => setSearchParams({ filter: '' })}>
+                    All
+                </button>
             </div> 
 
-            {searchParams ? <h1 className="text-center text-uppercase">TOPS</h1> : <h1 className="text-center text-uppercase">TOPS FOR {gender}</h1> } 
+            {searchParams.get('filter') === "" ? <h1 className="text-center text-uppercase">TOPS</h1> : <h1 className="text-center text-uppercase">TOPS FOR {searchParams.get('filter')}</h1> } 
             
 
             <img
