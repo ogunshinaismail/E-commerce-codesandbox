@@ -161,6 +161,12 @@ body {
   padding: 12px 20px 12px 20px;
   border: none;
 }
+.product-wish{
+  cursor: pointer;
+}
+.product-wish:hover{
+  color: #ea3c42;
+}
 @media screen and (max-width: 767px) {
   .product--info {
     padding-left: 2em;
