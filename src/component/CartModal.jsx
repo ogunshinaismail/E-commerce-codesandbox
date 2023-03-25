@@ -42,7 +42,7 @@ const CartModal = ({setShowCart}) => {
                                     <img src={item.imgURL} alt="" />
                                     <div className='item-det'>
                                         <div className="flex-between">
-                                            <p className='item-name'>{item.badge}</p>
+                                            <p className='item-name'>{item.details}</p>
                                             <div>
                                                 
                                                     <p 
@@ -80,7 +80,7 @@ const CartModal = ({setShowCart}) => {
                                                     }}
                                                 />
                                             </div>
-                                            <p>{item.price}</p>
+                                            <p>₦{item.price}</p>
                                         </div>
                                     </div>
                                 </div>
