@@ -88,7 +88,12 @@ const TrendinList = () => {
         swipeable
       >
         
-      {products.map((prod, index) => (
+      {products.filter(item => {
+         if (item.trending == true) {
+              return item;
+          }
+        })
+        .map((prod, index) => (
         <div
           className="trending-list"
           onMouseEnter={() => toggleElement(index)}

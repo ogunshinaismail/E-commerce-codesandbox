@@ -8,6 +8,7 @@ const Productdata = [
       type: "top", 
       gender: "men",
       price: 34000,
+      trending: false,
       size: "S M XL"
     },
     {
@@ -19,6 +20,7 @@ const Productdata = [
       type: "top", 
       gender: "women",
       price: 34000,
+      trending: false,
       size: "S M L XL"
     },
     {
@@ -30,6 +32,7 @@ const Productdata = [
       type: "top", 
       gender: "men",
       price: 34000,
+      trending: false,
       size: "S M L"
     },
     {
@@ -41,6 +44,7 @@ const Productdata = [
         type: "top", 
         gender: "women",
         price: 34000,
+        trending: false,
         size: "L"
     },
     {
@@ -52,6 +56,7 @@ const Productdata = [
         type: "top", 
         gender: "men",
         price: 34000,
+        trending: false,
         size: "L XL"
     },
     {
@@ -63,6 +68,7 @@ const Productdata = [
         type: "top", 
         gender: "women",
         price: 34000,
+        trending: false,
         size: "S M L XL"
     },
     {
@@ -74,6 +80,7 @@ const Productdata = [
         type: "top", 
         gender: "men",
         price: 34000,
+        trending: false,
         size: "S M"
     },
     {
@@ -85,6 +92,7 @@ const Productdata = [
         type: "top", 
         gender: "women",
         price: 34000,
+        trending: false,
         size: "S M L XL"
     },
     {
@@ -96,6 +104,7 @@ const Productdata = [
         type: "top", 
         gender: "men",
         price: 34000,
+        trending: false,
         size: "M L Xl XXL"
     },
     {
@@ -106,6 +115,7 @@ const Productdata = [
         details: "Skater Tuxedo jacket",
         type: "top", 
         price: 34000,
+        trending: false,
         gender: "women",
         size: "XL XXL"
     },
@@ -117,6 +127,7 @@ const Productdata = [
         details: "Skater Tuxedo jacket",
         type: "top", 
         price: 34000,
+        trending: false,
         gender: "men",
         size: "S M L XL"
     },
@@ -129,6 +140,7 @@ const Productdata = [
         type: "top", 
         gender: "women",
         price: 34000,
+        trending: false,
         size: "S  M  L  XL"
     },
     {
@@ -140,6 +152,7 @@ const Productdata = [
         type: "top", 
         gender: "men",
         price: 34000,
+        trending: false,
         size: "M  L  XXL"
     },
     {
@@ -151,6 +164,7 @@ const Productdata = [
         type: "top", 
         gender: "women",
         price: 34000,
+        trending: false,
         size: "M  L  XXL"
     },
     {
@@ -162,8 +176,137 @@ const Productdata = [
         type: "top", 
         gender: "men",
         price: 34000,
+        trending: false,
         size: "M  L"
-    }
+    },
+    {
+        id: 16,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 34000
+      },
+      {
+        id: 17,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 50000
+      },
+      {
+        id: 18,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 40000
+      },
+      {
+        id: 19,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 20000
+      },
+      {
+        id: 20,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 100000
+      },
+      {
+        id: 21,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 60000
+      },
+      {
+        id: 22,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 40000
+      },
+      {
+        id: 23,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 70000
+      },
+      {
+        id: 24,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 90000
+      },
+      {
+        id: 25,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 20000
+      },
+      {
+        id: 26,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 220000
+      },
+      {
+        id: 27,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 150000
+      },
+      {
+        id: 28,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 80000
+      },
+      {
+        id: 29,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 120000
+      },
+      {
+        id: 30,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 28000
+      },
+      {
+        id: 31,
+        badge: "HOT",
+        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        details: "Crocs Women's Classic Platform Clog-Black",
+        trending: true,
+        price: 25000
+      }
   ];
   
 export default Productdata;

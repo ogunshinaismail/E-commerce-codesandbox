@@ -4,6 +4,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 34000
     },
     {
@@ -11,6 +12,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 50000
     },
     {
@@ -18,6 +20,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 40000
     },
     {
@@ -25,6 +28,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 20000
     },
     {
@@ -32,6 +36,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 100000
     },
     {
@@ -39,6 +44,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 60000
     },
     {
@@ -46,6 +52,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 40000
     },
     {
@@ -53,6 +60,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 70000
     },
     {
@@ -60,6 +68,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 90000
     },
     {
@@ -67,6 +76,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 20000
     },
     {
@@ -74,6 +84,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 220000
     },
     {
@@ -81,6 +92,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 150000
     },
     {
@@ -88,6 +100,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 80000
     },
     {
@@ -95,6 +108,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 120000
     },
     {
@@ -102,6 +116,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 28000
     },
     {
@@ -109,6 +124,7 @@ const trendinglist = [
       badge: "HOT",
       imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
       details: "Crocs Women's Classic Platform Clog-Black",
+      trending: true,
       price: 25000
     }
   ];
