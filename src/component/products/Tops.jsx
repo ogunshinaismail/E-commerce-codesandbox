@@ -3,7 +3,7 @@ import Productdata from "../../ProductData";
 import Header from '../Header'
 import Contact from '../Contact'
 import '../style/Product.css'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,9 +16,10 @@ const Tops = () => {
     const [showEffect, setShowEffect] = useState(false);
     const [isGrid, setIsGrid] = useState(false);
     const [gender, setGender] = useState("");
+    const [ searchParams, setSearchParams ] = useSearchParams()
     const filteredTop = Productdata.filter(e => e.type === 'top')
-    const dataLength = filteredTop.filter(e => e.gender === gender)
-    console.log(filteredTop)
+    const dataLength = filteredTop.filter(e => e.gender === searchParams.get('filter'))
+    const showAll = searchParams.get('filter') === 'men' || 'women'
     
   return (
     <div>
@@ -26,16 +27,16 @@ const Tops = () => {
         
         <section className="main">
             <div className="min-header stick-on-scroll">
-                <button className="font-weight-normal text-dark button-women" onClick={() => setGender("women")}> 
+                <button className="font-weight-normal text-dark button-women" onClick={() => setSearchParams({ filter: 'women'})}> 
                     <a>Women</a>
                 </button>
 
-                <button className="font-weight-normal text-dark button-men" onClick={() => setGender("men")}>
+                <button className="font-weight-normal text-dark button-men" onClick={() => setSearchParams({ filter: 'men'})}>
                     Men
                 </button>
             </div> 
 
-            {gender == "" ? <h1 className="text-center text-uppercase">TOPS</h1> : <h1 className="text-center text-uppercase">TOPS FOR {gender}</h1> } 
+            {searchParams ? <h1 className="text-center text-uppercase">TOPS</h1> : <h1 className="text-center text-uppercase">TOPS FOR {gender}</h1> } 
             
 
             <img
@@ -45,7 +46,7 @@ const Tops = () => {
             />
 
             <div className="d-flex justify-content-between  pt-3 px-4 border-top border-bottom border-dark border-1 border-opacity-75 stick-on-scroll-filter">
-                <p>{gender === "" ? filteredTop.length : dataLength.length} Results</p>
+                <p>{searchParams.get('filter') === "" ? filteredTop.length : dataLength.length} Results</p>
                 <i
                     onClick={() => {
                         setIsGrid(!isGrid);
@@ -60,9 +61,9 @@ const Tops = () => {
                 <div className="container-fluid overflow-hidden">
                     <div className="row gx-5 ">
                         {filteredTop.filter(item => {
-                            if ( gender === "") {
+                            if ( searchParams.get('filter') === "") {
                                 return item;
-                            } else if (item.gender === gender) {
+                            } else if (item.gender === searchParams.get('filter')) {
                                 return item;
                             }
                         })

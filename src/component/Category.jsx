@@ -28,10 +28,10 @@ const Category = (props) => {
             <h3>{cat.details}</h3>
             <div className="button">
               <button>
-                <Link to={`/product/${cat.details.toLocaleLowerCase()}`}>{cat.type1}</Link>
+                <Link to={`/product/${cat.details.toLocaleLowerCase()}/?filter=men`}>{cat.type1}</Link>
               </button>
               <button className={cat.type2 === undefined ? "hide" : "nothide"}>
-                <Link to={`/product/${cat.details.toLocaleLowerCase()}`}>{cat.type2 === undefined ? "tt" : cat.type2}</Link>
+                <Link to={`/product/${cat.details.toLocaleLowerCase()}/?filter=women`}>{cat.type2 === undefined ? "tt" : cat.type2}</Link>
               </button>
             </div>
           </div>
