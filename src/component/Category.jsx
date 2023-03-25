@@ -6,24 +6,10 @@ import CategoryList from "../category";
 const Category = (props) => {
   return (
     <>
-      {/*<div class="col-lg-6">
-        <div className="list-item">
-          <img class="img-fluid d-block w-100" src={props.imgURL} alt="..." />
-          <h3>{props.details}</h3>
-          <div className="button">
-            <button onClick={console.log("object")}>
-              <Link to="/product">{props.type1}</Link>
-            </button>
-            <button className={props.type2 === undefined ? "hide" : "nothide"}>
-              <Link to="#">{props.type2 === undefined ? "tt" : props.type2}</Link>
-            </button>
-          </div>
-        </div>
-      </div>*/}
-
-      <div class="col-lg-6">
+      <div class="row g-0">
         {CategoryList && CategoryList.map( cat => (
-          <div className="list-item">
+          <div class='col-lg-6'>
+            <div className="list-item">
             <img class="img-fluid d-block w-100" src={cat.imgURL} alt="..." />
             <h3>{cat.details}</h3>
             <div className="button">
@@ -34,6 +20,7 @@ const Category = (props) => {
                 <Link to={`/product/${cat.details.toLocaleLowerCase()}/?filter=women`}>{cat.type2 === undefined ? "tt" : cat.type2}</Link>
               </button>
             </div>
+          </div>
           </div>
         ))}
       </div>
