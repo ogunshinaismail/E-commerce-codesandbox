@@ -2,7 +2,8 @@ import React from 'react'
 import Header from './Header'
 import Contact from './Contact'
 import { useParams } from 'react-router-dom'
-import trendinglist from '../Trending'
+// import trendinglist from '../Trending'
+import Productdata from '../ProductData'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { CartState } from '../context/Context'
@@ -10,7 +11,8 @@ import './style/ProductDetails.css'
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const product = trendinglist[id - 1]
+  // const product = trendinglist[id - 1]
+  const product = Productdata[id - 1]
   console.log(product);
   const {imgURL, details, price} = product;
   const { dispatch } = CartState()
@@ -77,7 +79,15 @@ const ProductDetails = () => {
             </div>
 
             <div class="mt-4">
-              <p><i class="bi bi-heart"></i> Add to wishlist</p>
+              <p onClick={() => {
+                  dispatch({
+                      type: 'ADD_TO_WISHLIST',
+                      payload: product
+                  })
+                }}
+              >
+                <i class="bi bi-heart"></i> Add to wishlist
+              </p>
             </div>
 
             <div

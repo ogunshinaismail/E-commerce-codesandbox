@@ -30,14 +30,17 @@ const Product = () => {
     const [showEffect, setShowEffect] = useState(false);
     const [isGrid, setIsGrid] = useState(false);
     const [gender, setGender] = useState("");
+    const [ open, setOpen ] = useState("")
     const filteredTop = Productdata.filter(e => e.type === 'top')
     const dataLength = filteredTop.filter(e => e.gender === gender)
-    console.log(filteredTop)
-    // console.log(Productdata)
 
-    // const hamdleFilter = () => {
-    //     navigate('/')
-    // }
+  const toggleElement = (i) => {
+    if(i === open) {
+        setOpen("")
+      } else {
+        setOpen(i)
+      }
+  };
 
     return (
         <>
@@ -51,6 +54,10 @@ const Product = () => {
 
                     <button className="font-weight-normal text-dark button-men" onClick={() => setGender("men")}>
                         Men
+                    </button>
+
+                    <button className="font-weight-normal text-dark button-men" onClick={() => setGender("")}>
+                        All
                     </button>
                 </div> 
 
@@ -75,25 +82,22 @@ const Product = () => {
                     </i>
                 </div>
 
-                {/*<section className="product--section">
+               <section className="product--section">
                     <div className="container-fluid overflow-hidden">
                         <div className="row gx-5 ">
-                        {Productdata && Productdata.filter(item => {
-                            if ( gender === "") {
-                                return item;
-                            } else if (item.gender === gender) {
-                                return item;
-                            }
-                        })
-                            .map((prod) => (
+                            {Productdata && Productdata.filter(item => {
+                                if ( gender === "") {
+                                    return item;
+                                } else if (item.gender === gender) {
+                                    return item;
+                                }
+                            })
+                            .map((prod, index) => (
                                 <div
                                     className={isGrid ? "col-md-6 col-sm-6 col-6 col-lg-6 mx-0 px-0 pt-3 pb-5 product--img text-center wrapper" : "col-md-4 col-sm-6 col-6 col-lg-4 mx-0 px-0 pt-3 pb-5 product--img text-center wrapper"}
-                                    onMouseEnter={() => {
-                                        setShowEffect(!showEffect);
-                                    }}
-                                    onMouseLeave={() => {
-                                        setShowEffect(showEffect);
-                                    }}
+                                    onMouseEnter={() => toggleElement(index)}
+                                    onMouseLeave={() => toggleElement(index)}
+                                    // onClick={() => navigate(`/product/${prod.id}`)}
                                 >
 
                                     <Swiper
@@ -103,10 +107,10 @@ const Product = () => {
                                     pagination={{
                                         clickable: true
                                     }}
-                                    navigation={showEffect ? true : false}
+                                    navigation={open === index ? true : false}
                                     modules={[Pagination, Navigation]}
                                     className="mySwiper"
-                                    > 
+                                    >  
                                         <SwiperSlide>
                                             <img className="img-fluid" src={prod.imgURL} alt="..." />
                                         </SwiperSlide>
@@ -120,18 +124,18 @@ const Product = () => {
                                         </SwiperSlide>
                                     </Swiper>
                         
-                                    <span className="text-uppercase product--details">
+                                    <span className="text-uppercase product--details" onClick={() => navigate(`/product/${prod.id}`)}>
                                         {showEffect ? prod.size : prod.details}
                                     </span>
                                 </div>
                                 ))}
                         </div>
                     </div>
-                                </section>*/}
+                </section>
 
 
 
-                <section className="product--section">
+                {/*<section className="product--section">
                     <div className="container-fluid overflow-hidden">
                         <div className="row gx-5 ">
                             {filteredTop.filter(item => {
@@ -159,7 +163,7 @@ const Product = () => {
                             
                         </div>
                     </div>
-                </section>
+                </section>*/}
             </section>
 
             <Contact />
