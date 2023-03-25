@@ -33,7 +33,7 @@ const Product = () => {
     const [isABtn, setABtn] = useState(false);
     const [isGrid, setIsGrid] = useState(false);
     const [gender, setGender] = useState("");
-    const [ open, setOpen ] = useState("")
+    const [ open, setOpen ] = useState("");
     const [ searchParams, setSearchParams ] = useSearchParams({filter: ""})
     const filteredTop = Productdata.filter(e => e.type === 'top')
     const dataLength = filteredTop.filter(e => e.gender === searchParams.get('filter'))
@@ -45,7 +45,7 @@ const Product = () => {
       } else {
         setOpen(i)
       }
-  };
+    };
 
     return (
         <>
@@ -70,7 +70,7 @@ const Product = () => {
                 
 
                 <img
-                    className="img-fluid d-block border border-dark border-1 border-opacity-50"
+                    className="img-fluid d-block w-100 border border-dark border-1 border-opacity-50"
                     src="https://balenciaga.dam.kering.com/m/3abae70dcbadb55d/Large-Banner-New_Balenciaga_Summer23_Campaign_Look18_2600x1016px-3x1.jpg"
                     alt="..."
                 />
