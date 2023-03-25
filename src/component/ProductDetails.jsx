@@ -86,7 +86,7 @@ const ProductDetails = () => {
                   })
                 }}
               >
-                <i class="bi bi-heart"></i> Add to wishlist
+                <i class="bi bi-heart product-wish"></i> Add to wishlist
               </p>
             </div>
 

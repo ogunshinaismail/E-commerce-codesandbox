@@ -17,6 +17,7 @@ body {
   flex-direction: column;
   gap: 1rem;
   text-align: center;
+  margin-bottom: 2.5em;
   /* overflow-x: hidden; */
 }
 .cart-disapointmment-face {
