@@ -28,6 +28,9 @@ function createProduct(goods) {
 const Product = () => {
     const navigate = useNavigate()
     const [showEffect, setShowEffect] = useState(false);
+    const [isWBtn, setWBtn] = useState(false);
+    const [isMBtn, setMBtn] = useState(false);
+    const [isABtn, setABtn] = useState(false);
     const [isGrid, setIsGrid] = useState(false);
     const [gender, setGender] = useState("");
     const [ open, setOpen ] = useState("")
@@ -50,15 +53,15 @@ const Product = () => {
             
             <section className="main">
                 <div className="min-header stick-on-scroll">
-                    <button className="font-weight-normal text-dark button-women" onClick={() => setSearchParams({ filter: 'women'})}> 
+                    <button className={isWBtn ? "button-effect" : "button-women"} onClick={() => {setSearchParams({ filter: 'women'}), setWBtn(!isWBtn), setABtn(false), setMBtn(false)}}> 
                         <a>Women</a>
                     </button>
 
-                    <button className="font-weight-normal text-dark button-men" onClick={() => setSearchParams({ filter: 'men'})}>
+                    <button className={isMBtn ? "button-effect" : "button-men"} onClick={() => {setSearchParams({ filter: 'men'}), setMBtn(!isWBtn), setABtn(false), setWBtn(false)}}>
                         Men
                     </button>
 
-                    <button className="font-weight-normal text-dark button-men" onClick={() => setSearchParams({ filter: '' })}>
+                    <button className={isABtn ? "button-effect" : "button-all"} onClick={() => {setSearchParams({ filter: '' }), setABtn(!isWBtn), setWBtn(false), setMBtn(false)}}>
                         All
                     </button>
                 </div> 
@@ -114,15 +117,15 @@ const Product = () => {
                                     className="mySwiper"
                                     >  
                                         <SwiperSlide>
-                                            <img className="img-fluid" src={prod.imgURL} alt="..." />
+                                            <img className="img-fluid w-100 g-0" src={prod.imgURL} alt="..." />
                                         </SwiperSlide>
                             
                                         <SwiperSlide>
-                                            <img className="img-fluid" src={prod.img2} alt="..." />
+                                            <img className="img-fluid w-100 g-0" src={prod.img2} alt="..." />
                                         </SwiperSlide>
                             
                                         <SwiperSlide>
-                                            <img className="img-fluid" src={prod.img3} alt="..." />
+                                            <img className="img-fluid w-100 g-0" src={prod.img3} alt="..." />
                                         </SwiperSlide>
                                     </Swiper>
                         

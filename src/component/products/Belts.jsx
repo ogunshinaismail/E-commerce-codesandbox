@@ -54,7 +54,7 @@ const Belts = () => {
                     onClick={() => {
                         setIsGrid(!isGrid);
                     }}
-                    class="bi bi-grid-fill"
+                    class="bi bi-grid-fill grid-icon"
                 >
                     
                 </i>

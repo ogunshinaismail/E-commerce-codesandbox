@@ -16,7 +16,7 @@ body {
 .product--img {
   border-left: 1px solid #000;
   border-bottom: 1px solid #000;
-  /* cursor: grab; */
+  cursor: pointer;
 }
 
 .swiper {
@@ -55,4 +55,27 @@ body {
 }
 .grid-icon{
   cursor: pointer;
+}
+.button-men,
+.button-women,
+.button-all {
+  outline: none !important;
+  background-color: transparent !important;
+  padding: 0.5em 0.8em;
+  border: 0;
+  text-transform: uppercase;
+}
+ .button-men:hover,
+.button-women:hover,
+.button-all:hover{
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.button-effect{
+  border: 1px solid #000 !important;
+  border-radius: 5px !important;
+  outline: none !important;
+  background-color: transparent !important;
+  padding: 0.5em 0.8em;
+  text-transform: uppercase;
 }

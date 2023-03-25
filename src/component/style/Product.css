@@ -20,25 +20,7 @@ body {
   display: flex;
   gap: 1em;
 }
-.button-women {
-  outline: none !important;
-  background-color: transparent !important;
-  padding: 0.5em 0.8em;
-  border: none !important;
-  text-transform: uppercase !important;
-}
-.button-women:hover {
-  border: 1px solid #000 !important;
-  border-radius: 5px !important;
-}
-.button-men {
-  outline: none !important;
-  background-color: transparent !important;
-  padding: 0.5em 0.8em;
-  border: 1px solid #000 !important;
-  border-radius: 5px !important;
-  text-transform: uppercase !important;
-}
+
 .main h1 {
   margin-block: 1.9em !important;
   font-weight: 700;
