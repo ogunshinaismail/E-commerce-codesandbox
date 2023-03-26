@@ -73,6 +73,9 @@
 .item-name {
     font-size: 14px;
     font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
 }
 
 .qty-price {

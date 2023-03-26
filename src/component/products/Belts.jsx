@@ -117,7 +117,7 @@ const Belts = () => {
                                     </SwiperSlide>
                                 </Swiper>
                     
-                                <span className="text-uppercase product--details">
+                                <span className="text-uppercase product--details" onClick={() => navigate(`/product/${prod.id}`)}>
                                     {showEffect ? prod.size : prod.details}
                                 </span>
                             </div>

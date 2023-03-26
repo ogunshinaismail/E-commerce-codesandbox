@@ -26,7 +26,7 @@ const CartModal = ({setShowCart}) => {
 
   return (
     <div className="main-container">
-        <div className='cart-container'>
+        <div className='cart-container'> 
             <div>
                 <div className="cart">
                     <div className="cart-header">
@@ -41,8 +41,9 @@ const CartModal = ({setShowCart}) => {
                                 <div className='item' key={item.id}>
                                     <img src={item.imgURL} alt="" />
                                     <div className='item-det'>
-                                        <div className="flex-between">
-                                            <p className='item-name'>{item.details}</p>
+                                        <div className="flex-between"> 
+                                            {/*<p className='item-name'>{item.details}</p>*/}
+                                            <Link to={`/product/${item.id}`} className='item-name'>{item.details}</Link>
                                             <div>
                                                 
                                                     <p 

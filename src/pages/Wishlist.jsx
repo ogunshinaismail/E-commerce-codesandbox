@@ -4,6 +4,7 @@ import Header from '../component/Header'
 import Contact from '../component/Contact'
 import { CartState } from '../context/Context'
 import EmptyWishlist from '../component/EmptyWishlist'
+import { Link } from 'react-router-dom'
 
 const Wishlist = () => {
   const { state: { wishlist, cart }, dispatch } = CartState()
@@ -56,7 +57,9 @@ const Wishlist = () => {
                                     />
                                 </td>
                                 <td className="wishlist__name">
+                                <Link to={`/product/${item.id}`}>
                                     {item.details}
+                                </Link>
                                 </td>
                                 <td className="wishlist--price">₦{item.price}</td>
                                 <td className="wishlist--crat">

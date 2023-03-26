@@ -3,7 +3,7 @@ import '../component/style/ViewCart.css'
 import Header from '../component/Header'
 import Contact from '../component/Contact'
 import { CartState } from '../context/Context'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import EmptyCart from '../component/EmptyCart'
 
 const Cart = () => {
@@ -59,7 +59,9 @@ const Cart = () => {
                                                 />
                                             </td>
                                             <td className="product__name">
-                                                {item.details}
+                                                <Link to={`/product/${item.id}`}>
+                                                    {item.details}
+                                                </Link>
                                             </td>
                                             <td className="viewcart--price">₦{item.price}</td>
                                             <td>

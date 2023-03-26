@@ -28,6 +28,10 @@ body {
   color: #333333 !important;
   padding-top: 2em !important;
 }
+.wishlist__name a {
+  text-decoration: none;
+  color: #333333 !important;
+}
 .wishlist--price {
   padding-top: 2em !important;
   color: #eb1c23 !important;

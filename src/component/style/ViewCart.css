@@ -27,6 +27,10 @@ body {
   color: #333333 !important;
   padding-top: 2em !important;
 }
+.product__name a {
+  text-decoration: none;
+  color: #333333 !important;
+}
 .viewcart--price {
   padding-top: 2em !important;
 }
