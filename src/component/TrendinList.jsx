@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./style/Trending.css";
 import "../App.css"
@@ -132,7 +128,7 @@ const TrendinList = () => {
                     </i>
                   )}
                 </div>
-                   <i class="bi bi-search"></i>
+                    <i style={{fontSize: '1.8rem'}} class="bi bi-eye"></i>
 
                 <div>
                   {wishlist.some( (p) => p.id === prod.id) ? (

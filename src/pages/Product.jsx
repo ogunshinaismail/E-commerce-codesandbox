@@ -97,8 +97,7 @@ const Product = () => {
                             setIsGrid(!isGrid);
                         }}
                         class="bi bi-grid-fill grid-icon"
-                    >
-                        
+                    >     
                     </i>
                 </div>
 
