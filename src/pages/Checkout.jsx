@@ -10,6 +10,7 @@ const Checkout = () => {
   const { state: { cart }, dispatch } = CartState()
   const [subTotal, setSubTotal] = useState()
   const [showCheckout, setShowCheckout] = useState(false)
+  const formatNumInit = new Intl.NumberFormat('en-US');
 
   useEffect(() => {
     setSubTotal(
@@ -163,13 +164,13 @@ const Checkout = () => {
                                                     <td scope="row">
                                                         {item.details}
                                                     </td>
-                                                    <td className="order-amount">₦{item.price * item.qty}</td>
+                                                    <td className="order-amount">₦{formatNumInit.format(item.price * item.qty)}</td>
                                                 </tr>     
                                             ))}
 
                                             <tr>
                                                 <th scope="row">Subtotal</th>
-                                                <td className="order-amount">₦{subTotal + ".00"}</td>
+                                                <td className="order-amount">₦{formatNumInit.format(subTotal)}</td>
                                             </tr>
 
                                             <tr>
@@ -187,7 +188,7 @@ const Checkout = () => {
 
                                             <tr>
                                                 <th scope="row">Total</th>
-                                                <td className="order-amount">₦{subTotal + ".00"}</td>
+                                                <td className="order-amount">₦{formatNumInit.format(subTotal)}</td>
                                             </tr>
                                         </tbody>
                                     </table>

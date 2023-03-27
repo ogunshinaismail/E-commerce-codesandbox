@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 const Wishlist = () => {
   const { state: { wishlist, cart }, dispatch } = CartState()
   const [subTotal, setSubTotal] = useState()
+  const formatNumInit = new Intl.NumberFormat('en-US');
 
   useEffect(() => {
     setSubTotal(
@@ -61,7 +62,7 @@ const Wishlist = () => {
                                     {item.details}
                                 </Link>
                                 </td>
-                                <td className="wishlist--price">₦{item.price}</td>
+                                <td className="wishlist--price">₦{formatNumInit.format(item.price)}</td>
                                 <td className="wishlist--crat">
                                     {cart.some( (p) => p.id === item.id) ? (
                                         <p onClick={() => 

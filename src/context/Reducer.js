@@ -15,10 +15,27 @@ export const cartReducer = (state, action) => {
                     ...state, 
                     cart: state.cart.filter( c => c.id === action.payload.id ? c.qty=action.payload.qty : c.qty)
                 };
-        case "INCREASE":
+        case "INCREASE_CART_QTY":
             return { 
                 ...state,
-                cart: state.cart.map(c => c.id === action.payload.id ? c.qty=action.payload.qty + 1 : c.qty)
+                // cart: state.cart.map(c => c.id === action.payload ? c.qty = c.qty + 1 : c.qty)
+                cart: state.cart.map(c => {
+                    if (c.id === action.payload) {
+                        c.qty += 0.5
+                    }
+                    return c
+                })
+            };
+        case "DECREASE_CART_QTY":
+            return { 
+                ...state,
+                // cart: state.cart.map(c => c.id === action.payload ? c.qty = c.qty + 1 : c.qty)
+                cart: state.cart.map(c => {
+                    if (c.id === action.payload) {
+                        c.qty -= 0.5
+                    }
+                    return c
+                })
             };
         case "ON_DELETE_ALL_ITEMS_FROM_CART":
             return {
@@ -35,6 +52,19 @@ export const cartReducer = (state, action) => {
                     ...state, 
                     wishlist: state.wishlist.filter( c => c.id !== action.payload.id )
                 }
+        default:
+            return state;
+    }
+};
+
+export const productReducer = (state, action) => {
+    switch (action.type) {
+        case "FILTER_BY_SEARCH":
+           return { 
+                    ...state, 
+                    searchQuery: action.payload 
+                }
+    
         default:
             return state;
     }

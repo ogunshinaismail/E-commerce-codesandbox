@@ -15,12 +15,15 @@ import { Link, useNavigate } from 'react-router-dom'
 
 export default function Header() {
   const [isSearch, setIsSearch] = useState(false);
+  // const [searcTerm, setSearchTerm] = useState("");
   const [showCart, setShowCart] = useState(false);
+  const navigate = useNavigate();
   const { 
       state: { wishlist, cart },
-      dispatch, 
+      productState: { searchQuery },
+      productDispatch, 
   } = CartState();
-  const navigate = useNavigate();
+  
 
   return (
     <>
@@ -87,10 +90,21 @@ export default function Header() {
           </div>
 
           <div className={isSearch ? "search-form active" : "search-form"}>
-            <input type="search" placeholder="What are you looking for ?" />
+            <input 
+              type="search" 
+              placeholder="What are you looking for ?" 
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  navigate("/product")
+                }
+                productDispatch({
+                  type: "FILTER_BY_SEARCH",
+                  payload: e.target.value
+                })
+              }} 
+            />
             <label for="search-box" class=""></label>
           </div>
-
           
           <button
             onClick={() => {

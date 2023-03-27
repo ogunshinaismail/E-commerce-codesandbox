@@ -7,7 +7,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import EmptyCart from '../component/EmptyCart'
 
 const Cart = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
   const { state: { cart }, dispatch } = CartState()
   const [subTotal, setSubTotal] = useState()
 
@@ -15,7 +15,11 @@ const Cart = () => {
     setSubTotal(
       cart.reduce((acc, curr) => acc + Number(curr.price) * curr.qty, 0)
     );
-  }, [cart]);
+  }, [cart]); 
+
+  const formatNumInit = new Intl.NumberFormat('en-US');
+
+  console.log(cart);
 
   return (
     <div>
@@ -63,15 +67,34 @@ const Cart = () => {
                                                     {item.details}
                                                 </Link>
                                             </td>
-                                            <td className="viewcart--price">₦{item.price}</td>
+                                            <td className="viewcart--price">₦{formatNumInit.format(item.price)}</td>
                                             <td>
                                                 <div class="d-flex align-items-center increment-button">
-                                                    <span class="p-2">-</span>
+                                                    <span 
+                                                        class="p-2"
+                                                        onClick={() => {
+                                                            if (item.qty < 1) {
+                                                                item.qty = 1
+                                                            }
+                                                            dispatch({ 
+                                                                type: "DECREASE_CART_QTY",
+                                                                payload: item.id
+                                                            })
+                                                        }}
+                                                    >-</span>
                                                     <span class="p-2">{item.qty}</span>
-                                                    <span class="p-2">+</span>
+                                                    <span 
+                                                        class="p-2" 
+                                                        onClick={() => {
+                                                            dispatch({
+                                                                type: "INCREASE_CART_QTY",
+                                                                payload: item.id
+                                                            })
+                                                        }}
+                                                    >+</span>
                                                 </div>
                                             </td>
-                                            <td className="sub-total">₦{item.price * item.qty}</td>
+                                            <td className="sub-total">₦{formatNumInit.format(item.price * item.qty)}</td>
                                         </tr>
                                     ))}
                                     </tbody>
@@ -79,7 +102,7 @@ const Cart = () => {
                             
                             <div class="mt-5 total-bal">
                                 <h3>
-                                    Total Balance : <span>₦{subTotal + ".00"}</span>
+                                    Total Balance : <span>₦{formatNumInit.format(subTotal)}</span>
                                 </h3>
                             </div>
 

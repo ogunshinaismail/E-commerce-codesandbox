@@ -11,19 +11,20 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import '../component/style/ProductList.css'
+import { CartState } from "../context/Context";
 
-function createProduct(goods) {
-    return (
-      <ProductList
-        key={goods.id}
-        imgURL={goods.imgURL}
-        img2={goods.img2}
-        img3={goods.img3}
-        details={goods.details}
-        size={goods.size}
-      />
-    );
-  } 
+// function createProduct(goods) {
+//     return (
+//       <ProductList
+//         key={goods.id}
+//         imgURL={goods.imgURL}
+//         img2={goods.img2}
+//         img3={goods.img3}
+//         details={goods.details}
+//         size={goods.size}
+//       />
+//     );
+//   } 
 
 const Product = () => {
     const navigate = useNavigate()
@@ -32,12 +33,26 @@ const Product = () => {
     const [isMBtn, setMBtn] = useState(false);
     const [isABtn, setABtn] = useState(false);
     const [isGrid, setIsGrid] = useState(false);
-    const [gender, setGender] = useState("");
     const [ open, setOpen ] = useState("");
+    const { 
+        state: { products },
+        productState: { searchQuery },
+        dispatch,
+      } = CartState()
     const [ searchParams, setSearchParams ] = useSearchParams({filter: ""})
-    const filteredTop = Productdata.filter(e => e.type === 'top')
+    const filteredTop = products.filter(e => e.type === 'top')
     const dataLength = filteredTop.filter(e => e.gender === searchParams.get('filter'))
-    const showAll = searchParams.get('filter') === 'men' || 'women'
+
+    const transformProduct = () => {
+        let sortedProduct = products
+        if (searchQuery) {
+            sortedProduct = sortedProduct.filter( prod => 
+                prod.details.toLowerCase().includes(searchQuery)
+            );
+        }
+
+        return sortedProduct;
+    }
 
   const toggleElement = (i) => {
     if(i === open) {
@@ -73,10 +88,10 @@ const Product = () => {
                     className="img-fluid d-block w-100 border border-dark border-1 border-opacity-50"
                     src="https://balenciaga.dam.kering.com/m/3abae70dcbadb55d/Large-Banner-New_Balenciaga_Summer23_Campaign_Look18_2600x1016px-3x1.jpg"
                     alt="..."
-                />
+                /> 
 
                 <div className="d-flex justify-content-between pt-3 px-4 border-top border-bottom border-dark border-1 border-opacity-75 stick-on-scroll-filter">
-                    <p>{searchParams.get('filter') === '' ? Productdata.length : dataLength.length} Results</p>
+                    <p>{searchParams.get('filter') === '' ? transformProduct().length : dataLength.length} Results</p>
                     <i
                         onClick={() => {
                             setIsGrid(!isGrid);
@@ -90,7 +105,7 @@ const Product = () => {
                <section className="product--section">
                     <div className="container-fluid overflow-hidden">
                         <div className="row gx-5 ">
-                            {Productdata && Productdata.filter(item => {
+                            {transformProduct() && transformProduct().filter(item => {
                                 if ( searchParams.get('filter') === '' ) {
                                     return item;
                                 } else if (item.gender === searchParams.get('filter')) {

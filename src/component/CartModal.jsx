@@ -8,6 +8,7 @@ const CartModal = ({setShowCart}) => {
     const { state: { cart }, dispatch } = CartState()
     const [total, setTotal] = useState()
     const [open, setOpen] = useState("")
+    const formatNumInit = new Intl.NumberFormat('en-US');
 
     useEffect(() => {
         setTotal(
@@ -81,7 +82,7 @@ const CartModal = ({setShowCart}) => {
                                                     }}
                                                 />
                                             </div>
-                                            <p>₦{item.price}</p>
+                                            <p>₦{formatNumInit.format(item.price)}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +99,7 @@ const CartModal = ({setShowCart}) => {
                     <div className="cart-base">
                         <div className="flex-between">
                             <p className='sub-total'>SUBTOTAL:</p>
-                            <p className='total'>₦{total + ".00"}</p>
+                            <p className='total'>₦{formatNumInit.format(total)}</p>
                         </div>
 
                         <div className="cart-btns">

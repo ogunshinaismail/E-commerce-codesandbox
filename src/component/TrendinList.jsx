@@ -37,6 +37,7 @@ const responsive = {
 const TrendinList = () => {
   const [isReact, isSetReact] = useState(false);
   const [ open, setOpen ] = useState("")
+  const formatNumInit = new Intl.NumberFormat('en-US');
 
   const toggleElement = (i) => {
     if(i === open) {
@@ -160,7 +161,7 @@ const TrendinList = () => {
               <p>
                 <Link to={`/product/${prod.id}`}>{prod.details}</Link>
               </p>
-              <span className="price">#{prod.price}</span>
+              <span className="price">₦{formatNumInit.format(prod.price)}</span>
         </div>
       ))}
        

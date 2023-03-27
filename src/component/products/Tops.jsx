@@ -26,7 +26,7 @@ const Tops = () => {
     
     const toggleElement = (i) => {
     if(i === open) {
-        setOpen("")
+        setOpen("") 
       } else {
         setOpen(i)
       }

@@ -4,7 +4,7 @@ const Productdata = [
       imgURL:"https://balenciaga.dam.kering.com/m/7da4159f503b60e1/Small-746410TJO251000_G.jpg?v=1",
       img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
       img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
-      details: "Skater Tuxedo jacket",
+      details: "Oluwa",
       type: "top", 
       gender: "men",
       price: 34000,
