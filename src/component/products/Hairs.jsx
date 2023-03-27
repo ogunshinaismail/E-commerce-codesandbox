@@ -49,7 +49,7 @@ const Hairs = () => {
                 </button> */}
             </div> 
 
-            {searchParams.get('filter') === "" ? <h1 className="text-center text-uppercase">HAIRS</h1> : <h1 className="text-center text-uppercase">HAIRS FOR {searchParams.get('filter')}</h1> } 
+            {searchParams.get('filter') === "" ? <h1 className="text-center text-uppercase">HAIRS</h1> : <h1 className="text-center text-uppercase">HAIRS</h1> } 
             
 
             <img
