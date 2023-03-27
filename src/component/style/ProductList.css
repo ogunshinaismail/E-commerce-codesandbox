@@ -17,11 +17,19 @@ body {
   border-left: 1px solid #000;
   border-bottom: 1px solid #000;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-/* .product--img img{
-  width: 200px;
-  height: 200px;
-} */
+.product__card{
+  width: 270px;
+  height: 300px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .swiper {
   margin-left: auto;
   margin-right: auto;

@@ -4,7 +4,7 @@ const Productdata = [
       imgURL:"https://balenciaga.dam.kering.com/m/7da4159f503b60e1/Small-746410TJO251000_G.jpg?v=1",
       img2: "https://balenciaga.dam.kering.com/m/7b3952b943d65b98/Small-746410TJO251000_F.jpg?v=1",
       img3: "https://balenciaga.dam.kering.com/m/3f609bf5a4dbbfc2/Small-746410TJO251000_D.jpg?v=1",
-      details: "Oluwa",
+      details: "Skater Tuxedo jacket",
       type: "top", 
       gender: "men",
       price: 34000,
@@ -298,14 +298,6 @@ const Productdata = [
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 28000
-      },
-      {
-        id: 31,
-        badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
-        details: "Crocs Women's Classic Platform Clog-Black",
-        trending: true,
-        price: 25000
       }
   ];
   

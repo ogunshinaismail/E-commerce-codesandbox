@@ -105,7 +105,7 @@ const Product = () => {
                                     onMouseLeave={() => toggleElement(index)}
                                     // onClick={() => navigate(`/product/${prod.id}`)}
                                 >
-
+                                    <div className="product__card">
                                     <Swiper
                                     slidesPerView={1}
                                     spaceBetween={30}
@@ -129,6 +129,7 @@ const Product = () => {
                                             <img className="img-fluid w-100 g-0" src={prod.img3} alt="..." />
                                         </SwiperSlide>
                                     </Swiper>
+                                    </div>
                         
                                     <span className="text-uppercase product--details" onClick={() => navigate(`/product/${prod.id}`)}>
                                         {showEffect ? prod.size : prod.details}
