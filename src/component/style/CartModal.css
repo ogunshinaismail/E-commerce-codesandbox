@@ -57,7 +57,7 @@ body {
     border-top: 1px solid #e1e1e1;
 }
 .cart__modal{
-    height: 23rem;
+    height: 24rem;
     overflow-y: scroll;
 }
 .item:first-child {
