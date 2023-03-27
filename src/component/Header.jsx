@@ -20,7 +20,6 @@ export default function Header() {
   const navigate = useNavigate();
   const { 
       state: { wishlist, cart },
-      productState: { searchQuery },
       productDispatch, 
   } = CartState();
   
@@ -58,6 +57,7 @@ export default function Header() {
                 aria-label="Close"
               ></button>
             </div>
+
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">

@@ -13,19 +13,6 @@ import { Pagination, Navigation } from "swiper";
 import '../component/style/ProductList.css'
 import { CartState } from "../context/Context";
 
-// function createProduct(goods) {
-//     return (
-//       <ProductList
-//         key={goods.id}
-//         imgURL={goods.imgURL}
-//         img2={goods.img2}
-//         img3={goods.img3}
-//         details={goods.details}
-//         size={goods.size}
-//       />
-//     );
-//   } 
-
 const Product = () => {
     const navigate = useNavigate()
     const [showEffect, setShowEffect] = useState(false);
@@ -151,38 +138,6 @@ const Product = () => {
                         </div>
                     </div>
                 </section>
-
-
-
-                {/*<section className="product--section">
-                    <div className="container-fluid overflow-hidden">
-                        <div className="row gx-5 ">
-                            {filteredTop.filter(item => {
-                                if ( gender === "") {
-                                    return item; 
-                                } else if (item.gender === gender) {
-                                    return item;
-                                } 
-                            })
-                            .map(createProduct).slice(0, 12)}
-
-                            <img
-                            className="img-fluid w-100 g-0"
-                            src="https://balenciaga.dam.kering.com/m/625d2beb9b5ab1a4/Large-MB_Balenciaga_Summer23_Campaign_Look24_3200x1800px-16x9.jpg"
-                            alt="..."
-                            />
-                            {filteredTop.filter(item => {
-                                if ( gender === "") {
-                                    return item;
-                                } else if (item.gender === gender) {
-                                    return item;
-                                }
-                            })
-                            .map(createProduct).slice(12, 16)}
-                            
-                        </div>
-                    </div>
-                </section>*/}
             </section>
 
             <Contact />

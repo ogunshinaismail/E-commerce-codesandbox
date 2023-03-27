@@ -2,18 +2,13 @@ import React, { useState } from "react";
 import '../App.css'
 import Header from "../component/Header";
 import Home from "../component/Home";
-import Entry from "../component/Trending";
-// import trendinglist from "./Trending";
 import Category from "../component/Category";
 import Side from "../component/Side";
 import Contact from "../component/Contact";
-// import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-// import { Navigation, Pagination } from "swiper";
-// import { Autoplay, Pagination, Navigation } from "swiper";
 import "../component/style/Trending.css";
 import "../component/style/Category.css";
 import { CartState } from "../context/Context";

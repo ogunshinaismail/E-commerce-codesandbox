@@ -128,7 +128,10 @@ const TrendinList = () => {
                     </i>
                   )}
                 </div>
-                    <i style={{fontSize: '1.8rem'}} class="bi bi-eye"></i>
+                
+                <Link to={`/product/${prod.id}`}>
+                  <i style={{fontSize: '1.8rem'}} class="bi bi-eye"></i>
+                </Link>
 
                 <div>
                   {wishlist.some( (p) => p.id === prod.id) ? (
