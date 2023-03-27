@@ -75,17 +75,20 @@ body {
 }
 
 .item-name {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
     color: #000;
 }
+.item-name:hover{
+    color: #eb1c23;
+}
 
 .qty-price {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
     /* height: 50px; */
 }
 
@@ -101,12 +104,26 @@ body {
     padding: 1rem;
 }
 
+.cartmodal-incrementt-button {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-align: center;
+    color: #777777;
+  }
+  .cartmodal-incrementt-button span {
+    border: 1px solid #e8e8e8;
+  }
+  .cartmodal-incrementt-button span:hover {
+    background-color: #eb1c23;
+    color: #ffffff;
+    cursor: pointer;
+  }
 .sub-total {
     font-weight: 600;
 }
 
 .total {
-    color: red;
+    color: #eb1c23;
     font-weight: 700;
 }
 

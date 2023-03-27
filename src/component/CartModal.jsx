@@ -33,7 +33,7 @@ const CartModal = ({setShowCart}) => {
                 <div className="cart">
                     <div className="cart-header">
                         <p>SHOPPING CART</p>
-                        <p onClick={() => setShowCart(false)} className='close close-top'>X CLOSE</p>
+                        <p onClick={() => setShowCart(false)} className='close close-top bi bi-x-lg'> CLOSE</p>
                     </div>
 
                     <div className="cart-items">
@@ -49,7 +49,7 @@ const CartModal = ({setShowCart}) => {
                                             <div>
                                                 
                                                     <p 
-                                                        className='close'
+                                                        className='close bi bi-x-lg'
                                                         onClick={() => {
                                                             dispatch({
                                                                 type: "REMOVE_FROM_CART",
@@ -58,33 +58,21 @@ const CartModal = ({setShowCart}) => {
                                                         }
                                                     }
                                                     >
-                                                        X
+                                                        
                                                     </p>
                                             
                                             </div>
                                         </div>
-                                        <div className="qty-price">
-                                            <div className='qty'> 
-                                                <input 
-                                                    type="number" 
-                                                    value={item.qty}
-                                                    min="1"
-                                                    onChange={(e) => {
-                                                        if (item.qty.value < 1) {
-                                                            item.qty.value = 1
-                                                        }
-                                                        dispatch({
-                                                            type: "CHANGE_CART_QTY",
-                                                            payload: {
-                                                                id: item.id,
-                                                                qty: e.target.value,
-                                                            },
-                                                        })
-                                                    }}
-                                                />
+                                        <div>
+                                            <div class="mt-1 d-flex align-items-center gap-5">
+                                                <div class="d-flex align-items-center cartmodal-incrementt-button">
+                                                    <span class="p-2">-</span>
+                                                    <span class="p-2">1</span>
+                                                    <span class="p-2">+</span>
+                                                </div>
+                                                <p className='mt-2'>₦{formatNumInit.format(item.price)}.00</p>
                                             </div>
-                                            <p>₦{formatNumInit.format(item.price)}.00</p>
-                                        </div>
+                                        </div>    
                                     </div>
                                 </div>
                             ))}
