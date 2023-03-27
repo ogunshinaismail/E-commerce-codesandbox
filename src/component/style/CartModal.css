@@ -47,14 +47,19 @@ body {
     cursor: pointer;
     font-weight: 600;
 }
-
+.close:hover{
+    color: #eb1c23;
+}
 .item {
     padding: 1rem;
     display: flex;
     gap: 1rem;
     border-top: 1px solid #e1e1e1;
 }
-
+.cart__modal{
+    height: 23rem;
+    overflow-y: scroll;
+}
 .item:first-child {
     border-top: none;
 }
@@ -83,17 +88,6 @@ body {
 }
 .item-name:hover{
     color: #eb1c23;
-}
-
-.qty-price {
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
-    /* height: 50px; */
-}
-
-.qty input {
-    width: 50px;
 }
 
 .cart-base {

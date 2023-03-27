@@ -38,7 +38,7 @@ const CartModal = ({setShowCart}) => {
 
                     <div className="cart-items">
                     {cart.length > 0 ? (
-                        <div>
+                        <div className='cart__modal'>
                             {cart.map((item, index) => (
                                 <div className='item' key={item.id}>
                                     <img src={item.imgURL} alt="" />
