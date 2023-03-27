@@ -1,9 +1,10 @@
 import slider1 from "../images/slider-1.png";
 import slider2 from "../images/slider-2.webp";
+import './style/Home.css'
 
 export default function Home() {
   return (
-    <div style={{marginTop: '4em'}} id="home">
+    <div id="home" className="home-section">
       <div
         id="carouselExampleFade"
         class="carousel slide carousel-fade"
