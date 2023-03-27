@@ -1,16 +1,17 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import './style/EmptyWishlist.css'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import './style/EmptyWishlist.css';
+import EmptyWImg from '../images/wishempty.png'
 
 const EmptyWishlist = () => {
   const navigate = useNavigate()
   return (
       <div className="wishlistempty-section">
-          <h1 className="wish-disapointmment-face">😞</h1>
-          <p>You don't have any product your wishlist yet.</p>
+          <img src={EmptyWImg} alt='....'/>
+          <p>You don't have any product in your wishlist yet.</p>
           <button onClick={() => navigate('/product')}>Shop Now</button>
       </div>
   )
 }
 
-export default EmptyWishlist
+export default EmptyWishlist;
