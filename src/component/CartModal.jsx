@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import './style/CartModal.css'
-import { CartState } from '../context/Context'
-import { Link, useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import './style/CartModal.css';
+import { CartState } from '../context/Context';
+import { Link, useNavigate } from 'react-router-dom';
+import EmptyImg from '../images/empty.png';
 
 const CartModal = ({setShowCart}) => {
     const navigate = useNavigate()
@@ -82,16 +83,16 @@ const CartModal = ({setShowCart}) => {
                                                     }}
                                                 />
                                             </div>
-                                            <p>₦{formatNumInit.format(item.price)}</p>
+                                            <p>₦{formatNumInit.format(item.price)}.00</p>
                                         </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     ) : (
-                        <div class='text-center mt-5'>
-                            <h1>😞</h1>
-                            <p class='empty-cart mt-1'>Your cart is empty</p>
+                        <div class='text-center mt-5 empty-cart'>
+                            <img src={EmptyImg} />
+                            <p class='mt-1'>Your cart is empty</p>
                         </div>
                     )}
                     </div>
@@ -99,7 +100,7 @@ const CartModal = ({setShowCart}) => {
                     <div className="cart-base">
                         <div className="flex-between">
                             <p className='sub-total'>SUBTOTAL:</p>
-                            <p className='total'>₦{formatNumInit.format(total)}</p>
+                            <p className='total'>₦{formatNumInit.format(total)}.00</p>
                         </div>
 
                         <div className="cart-btns">
