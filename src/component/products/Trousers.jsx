@@ -95,6 +95,7 @@ const Trousers = () => {
                                 // }}
                             >
 
+<div className="product__card">
                                 <Swiper
                                 slidesPerView={1}
                                 spaceBetween={30}
@@ -107,17 +108,18 @@ const Trousers = () => {
                                 className="mySwiper"
                                 > 
                                     <SwiperSlide>
-                                        <img className="img-fluid w-100 d-block" src={prod.imgURL} alt="..." />
+                                        <img className="img-fluid w-100 d-block g-0" src={prod.imgURL} alt="..." />
                                     </SwiperSlide>
                         
                                     <SwiperSlide>
-                                        <img className="img-fluid w-100 d-block" src={prod.img2} alt="..." />
+                                        <img className="img-fluid w-100 d-block g-0" src={prod.img2} alt="..." />
                                     </SwiperSlide>
                         
                                     <SwiperSlide>
-                                        <img className="img-fluid w-100 d-block" src={prod.img3} alt="..." />
+                                        <img className="img-fluid w-100 d-block g-0" src={prod.img3} alt="..." />
                                     </SwiperSlide>
                                 </Swiper>
+                                </div>
                     
                                 <span className="text-uppercase product--details" onClick={() => navigate(`/product/${prod.id}`)}>
                                     {showEffect ? prod.size : prod.details}
