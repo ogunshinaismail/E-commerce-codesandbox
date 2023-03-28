@@ -66,9 +66,25 @@ const CartModal = ({setShowCart}) => {
                                         <div>
                                             <div class="mt-1 d-flex align-items-center gap-5">
                                                 <div class="d-flex align-items-center cartmodal-incrementt-button">
-                                                    <span class="p-2">-</span>
-                                                    <span class="p-2">1</span>
-                                                    <span class="p-2">+</span>
+                                                    <span 
+                                                        class="p-2"
+                                                        onClick={() => {
+                                                            dispatch({ 
+                                                                type: "DECREASE_CART_QTY",
+                                                                payload: item.id
+                                                            })
+                                                        }}
+                                                    >-</span>
+                                                    <span class="p-2">{item.qty}</span>
+                                                    <span 
+                                                        class="p-2" 
+                                                        onClick={() => {
+                                                            dispatch({
+                                                                type: "INCREASE_CART_QTY",
+                                                                payload: item.id
+                                                            })
+                                                        }}
+                                                    >+</span> 
                                                 </div>
                                                 <p className='mt-2'>₦{formatNumInit.format(item.price)}.00</p>
                                             </div>

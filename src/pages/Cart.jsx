@@ -73,9 +73,6 @@ const Cart = () => {
                                                     <span 
                                                         class="p-2"
                                                         onClick={() => {
-                                                            if (item.qty < 1) {
-                                                                item.qty = 1
-                                                            }
                                                             dispatch({ 
                                                                 type: "DECREASE_CART_QTY",
                                                                 payload: item.id
