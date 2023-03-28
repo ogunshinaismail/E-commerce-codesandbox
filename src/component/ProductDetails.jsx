@@ -3,9 +3,9 @@ import Header from './Header'
 import Contact from './Contact'
 import { useParams } from 'react-router-dom'
 // import trendinglist from '../Trending'
+import { Carousel } from "react-responsive-carousel";
+import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Productdata from '../ProductData'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { CartState } from '../context/Context'
 import './style/ProductDetails.css'
 
@@ -14,7 +14,7 @@ const ProductDetails = () => {
   // const product = trendinglist[id - 1]
   const product = Productdata[id - 1]
   console.log(product);
-  const {imgURL, details, price} = product;
+  const {imgURL, details, price, img2, img3} = product;
   const { dispatch } = CartState()
 
   return (
@@ -25,11 +25,24 @@ const ProductDetails = () => {
         <div class="row g-0">
           {/* first coloumn start */}
           <div class="col-md-6 col-sm-12 ">
-            <img
-              class="d-block w-70 img-fluid"
-              src={imgURL} 
-              alt="..."
-            />
+            <div className="product-corousel">
+              <Carousel 
+                showStatus={false}
+                showIndicators={false}
+                thumbWidth="200px"
+                // infiniteLoop={true}
+              >
+                <div>
+                  <img alt="..." src={imgURL} class='product-detail-img img-fluid'/>
+                </div>
+                <div>
+                  <img alt="..." src={img2} class='product-detail-img img-fluid'/>
+                </div>
+                <div>
+                  <img alt="..." src={img3} class='product-detail-img img-fluid'/>
+                </div>
+              </Carousel>
+            </div>
           </div>
           {/* first column end */}
           <div class="col-md-6 col-sm-12 mt-5 product--info">

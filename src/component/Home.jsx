@@ -1,7 +1,7 @@
 import slider1 from "../images/slider-1.png";
 import slider2 from "../images/slider-2.webp";
 import './style/Home.css'
-
+// https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg
 export default function Home() {
   return (
     <div id="home" className="home-section">

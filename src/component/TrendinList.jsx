@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -34,6 +34,7 @@ const TrendinList = () => {
   const [isReact, isSetReact] = useState(false);
   const [ open, setOpen ] = useState("")
   const formatNumInit = new Intl.NumberFormat('en-US');
+
 
   const toggleElement = (i) => {
     if(i === open) {

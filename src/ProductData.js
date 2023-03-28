@@ -182,7 +182,9 @@ const Productdata = [
     {
         id: 16,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 34000
@@ -190,7 +192,9 @@ const Productdata = [
       {
         id: 17,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 50000
@@ -198,7 +202,9 @@ const Productdata = [
       {
         id: 18,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 40000
@@ -206,7 +212,9 @@ const Productdata = [
       {
         id: 19,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 20000
@@ -214,7 +222,9 @@ const Productdata = [
       {
         id: 20,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 100000
@@ -222,7 +232,9 @@ const Productdata = [
       {
         id: 21,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 60000
@@ -230,7 +242,9 @@ const Productdata = [
       {
         id: 22,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 40000
@@ -238,7 +252,9 @@ const Productdata = [
       {
         id: 23,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 70000
@@ -246,7 +262,9 @@ const Productdata = [
       {
         id: 24,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 90000
@@ -254,7 +272,9 @@ const Productdata = [
       {
         id: 25,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 20000
@@ -262,7 +282,9 @@ const Productdata = [
       {
         id: 26,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 220000
@@ -270,7 +292,9 @@ const Productdata = [
       {
         id: 27,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 150000
@@ -278,7 +302,9 @@ const Productdata = [
       {
         id: 28,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 80000
@@ -286,7 +312,9 @@ const Productdata = [
       {
         id: 29,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 120000
@@ -294,7 +322,9 @@ const Productdata = [
       {
         id: 30,
         badge: "HOT",
-        imgURL:"https://m.media-amazon.com/images/I/71IeYI6nTFL._AC_UX395_.jpg",
+        imgURL:"/images/trending-img.png",
+        img2: "/images/trending-img.png",
+        img3: "/images/trending-img.png",
         details: "Crocs Women's Classic Platform Clog-Black",
         trending: true,
         price: 28000

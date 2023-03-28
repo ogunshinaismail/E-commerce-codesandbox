@@ -8,13 +8,16 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style/Header.css";
 import logo from "../images/logo.png";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CartState } from "../context/Context";
 import CartModal from "./CartModal";
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 export default function Header() {
   const [isSearch, setIsSearch] = useState(false);
+  const location = useLocation()
+
+  const trending = useRef(null)
   // const [searcTerm, setSearchTerm] = useState("");
   const [showCart, setShowCart] = useState(false);
   const navigate = useNavigate();
@@ -22,6 +25,26 @@ export default function Header() {
       state: { wishlist, cart },
       productDispatch, 
   } = CartState();
+
+  const processClick =(id) => {
+    if (document.getElementById("close")) {
+    document.getElementById("close").click()
+      
+    }
+    if(document.getElementById(id)) {
+      document.getElementById(id).scrollIntoView({behavior: 'smooth'})
+
+
+    }
+
+  }
+  useEffect(()=>{
+    if(location.hash || location.hash !== '') {
+      processClick(location.hash.substring(1))
+      // console.log(43567);
+    }
+  },[])
+ 
   
 
   return (
@@ -52,6 +75,7 @@ export default function Header() {
               </div>
               <button
                 type="button"
+                id="close"
                 class="btn-close"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
@@ -61,22 +85,22 @@ export default function Header() {
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="#home">
+                  <a class="nav-link" href="#home" onClick={() => processClick('home')}>
                     HOME
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#trending">
+                  <a class="nav-link" href="/#trending" onClick={() => processClick('trending')}>
                     TRENDING
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#category">
+                  <a class="nav-link" href="/#category" onClick={() => processClick('category')}>
                     CATEGORY
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contact">
+                  <a class="nav-link" href="/#contact" onClick={() => processClick('contact')}>
                     CONTACT
                   </a>
                 </li>
