@@ -39,6 +39,11 @@ body {
     border-bottom: 2px solid #e1e1e1;
 }
 
+.cart__modal{
+    height: 24rem;
+    overflow-y: scroll;
+}
+
 .close-top {
     font-weight: 400 !important;
 }
