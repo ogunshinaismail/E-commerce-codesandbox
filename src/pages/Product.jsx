@@ -105,17 +105,17 @@ const Product = () => {
                                     onMouseLeave={() => toggleElement(index)}
                                     // onClick={() => navigate(`/product/${prod.id}`)}
                                 >
-                                    <div className="product__card">
+                                    <div className="product__card"> 
                                     <Swiper
-                                    slidesPerView={1}
-                                    spaceBetween={30}
-                                    loop={true}
-                                    pagination={{
-                                        clickable: true
-                                    }}
-                                    navigation={open === index ? true : false}
-                                    modules={[Pagination, Navigation]}
-                                    className="mySwiper"
+                                        slidesPerView={1}
+                                        spaceBetween={30}
+                                        loop={true}
+                                        pagination={{
+                                            clickable: true
+                                        }}
+                                        navigation={open === index ? true : false}
+                                        modules={[Pagination, Navigation]}
+                                        className="mySwiper"
                                     >  
                                         <SwiperSlide>
                                             <img className="img-fluid w-100 d-block g-0" src={prod.imgURL} alt="..." />

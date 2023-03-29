@@ -13,6 +13,21 @@ body{
     color: #ffffff;
     background-color: #000000;
 }
+@media only screen and (min-width: 300px) {
+  .product__card{
+    width: 184px !important;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .product__card{
+    width: 197px !important;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .product__card{
+    width: 204px !important;
+  }
+}
 /* .homepage {
   position: relative;
 } */

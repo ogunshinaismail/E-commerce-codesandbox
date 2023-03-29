@@ -89,4 +89,21 @@ body {
   background-color: transparent !important;
   padding: 0.5em 0.8em;
   text-transform: uppercase;
+} 
+
+@media only screen and (min-width: 300px) {
+  .product__card{
+    width: 184px !important;
+  }
+}
+@media only screen and (min-width: 400px) {
+  .product__card{
+    width: 197px !important;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .product__card{
+    width: 270px !important;
+  }
 }
