@@ -118,11 +118,11 @@ const Product = () => {
                                         className="mySwiper"
                                     >  
                                         <SwiperSlide>
-                                            <img className="img-fluid w-100 d-block g-0" src={prod.imgURL} alt="..." />
+                                            <img className="img-fluid w-100 g-0" src={prod.imgURL} alt="..." />
                                         </SwiperSlide>
                             
                                         <SwiperSlide>
-                                            <img className="img-fluid w-100 d-block g-0" src={prod.img2} alt="..." />
+                                            <img className="img-fluid w-100 g-0" src={prod.img2} alt="..." />
                                         </SwiperSlide>
                             
                                         <SwiperSlide>

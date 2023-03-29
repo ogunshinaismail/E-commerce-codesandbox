@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
-import '../style/ProductList.css'
+import '../style/ProductList.css';
 
 const Bags = () => {
     const navigate = useNavigate()
@@ -87,42 +87,36 @@ const Bags = () => {
                                 className={isGrid ? "col-md-6 col-sm-6 col-6 col-lg-6 mx-0 px-0 pt-3 pb-5 product--img text-center wrapper" : "col-md-4 col-sm-6 col-6 col-lg-4 mx-0 px-0 pt-3 pb-5 product--img text-center wrapper"}
                                 onMouseEnter={() => toggleElement(index)}
                                 onMouseLeave={() => toggleElement(index)}
-                                // onMouseEnter={() => {
-                                //     setShowEffect(!showEffect);
-                                // }}
-                                // onMouseLeave={() => {
-                                //     setShowEffect(showEffect);
-                                // }}
                             >
-                                <div className="product__card">
-                                <Swiper
-                                slidesPerView={1}
-                                spaceBetween={30}
-                                loop={true}
-                                pagination={{
-                                    clickable: true
-                                }}
-                                navigation={open === index ? true : false}
-                                modules={[Pagination, Navigation]}
-                                className="mySwiper"
-                                > 
-                                    <SwiperSlide>
-                                        <img className="img-fluid w-100 d-block g-0" src={prod.imgURL} alt="..." />
-                                    </SwiperSlide>
+                                <div className="product__card"> 
+                                    <Swiper
+                                        slidesPerView={1}
+                                        spaceBetween={30}
+                                        loop={true}
+                                        pagination={{
+                                            clickable: true
+                                        }}
+                                        navigation={open === index ? true : false}
+                                        modules={[Pagination, Navigation]}
+                                        className="mySwiper"
+                                    >  
+                                        <SwiperSlide>
+                                            <img className="img-fluid w-100 g-0" src={prod.imgURL} alt="..." />
+                                        </SwiperSlide>
+                            
+                                        <SwiperSlide>
+                                            <img className="img-fluid w-100 g-0" src={prod.img2} alt="..." />
+                                        </SwiperSlide>
+                            
+                                        <SwiperSlide>
+                                            <img className="img-fluid w-100 g-0" src={prod.img3} alt="..." />
+                                        </SwiperSlide>
+                                    </Swiper>
+                                    </div>
                         
-                                    <SwiperSlide>
-                                        <img className="img-fluid w-100 d-block g-0" src={prod.img2} alt="..." />
-                                    </SwiperSlide>
-                        
-                                    <SwiperSlide>
-                                        <img className="img-fluid w-100 d-block g-0" src={prod.img3} alt="..." />
-                                    </SwiperSlide>
-                                </Swiper>
-                                </div>
-                    
-                                <span className="text-uppercase product--details" onClick={() => navigate(`/product/${prod.id}`)}>
-                                    {showEffect ? prod.size : prod.details}
-                                </span>
+                                    <span className="text-uppercase product--details" onClick={() => navigate(`/product/${prod.id}`)}>
+                                        {showEffect ? prod.size : prod.details}
+                                    </span>
                             </div>
                         ))}
                     </div>
